@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--body-bg) !important;
+    line-height: 1.7;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 1.25em 0 0.2em;
+  font-size: 285.7%;
+  line-height: 1.2;
+  font-family: var(--font-family-secondary);
+}
+
+h3 {
+    margin: 1.25em 0 0.2em;
+  font-size: 228.5%;
+  line-height: 1.3;
+  font-family: var(--font-family-secondary);
+}
+
+.root {
+    box-sizing: border-box;
+}
+
+.site {
+    background-color: unset;
+}
+
+header {
+    background-color: #000 !important;
+}
+
+.navbar {
+    width: 90%;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.brand {
+    color: var(--title-color);
+    margin-top: 22px;
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    line-height: 1;
+}
+
+.navigation {
+    color: var(--title-color);
+    margin-top: 22px;
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    float: right;
+    display: block;
+    line-height: 1;
+    align-content: end;
+}
+
+.navigation a {
+    font-size: 15px;
+}
+
+.display-block {
+    display: block;
+}
+
+.float-right {
+    float: right;
+}
+
+article {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+.part-wrapper {
+    margin: auto;
+  width: fit-content;
+}
+
+.part {
+    align-content: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 1380px;
+
+    /* left: -324.5px; */
+
+    /* padding-left: 324.5px;
+    padding-right: 324.5px;
+    margin-left: -15px;
+    margin-right: -15px; */
+}
+
+.small-padding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.more-padding {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.part:nth-child(1) {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.part .col-1 {
+    min-width: 55%;
+}
+
+.part .col-2 {
+    max-width: 45%;
+}
+
+.part h1 {
+    font-size: 5em;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.wrap-half {
+    width: 50%;
+}
+
+.wrap-third {
+    width: 33.333%;
+}
+
+.title {
+    line-height: 1.1;
+    min-width: 55%;
+    width: 50%;
+}
+
+.title-image {
+    max-width: 45%;
+}
+
+.title-image img {
+    border-radius: 20em;
+    border: groove 1em;
+    border-color: var(--border-color);
+    font-size: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.seperator {
+    margin-bottom: -3em;
+    margin-left: 0;
+    margin-right: auto;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.line-holder {
+  height: 1px;
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 10%;
+}
+
+.line {
+    height: 1px;
+    border-top: 5px solid;
+    display: block;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+
+.text-col {
+    align-items: stretch;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+    position: relative;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+.project-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: space-around;
+}
+
+.project-box {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    min-height: 1px;
+    box-sizing: border-box;
+
+    width: 32%;
+}
+
+.project-box-inside {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    min-height: 250px;
+
+}
+
+.project-box-inside > a > div > div {
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform .5s ease-in-out;
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-position: center;
+
+    transform: rotateY(0);
+    z-index: 1;
+}
+
+.project-box-inside > a > div > div:nth-child(2) {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.project-box-inside:hover > a > div > div:nth-child(2) {
+    transform: rotateY(0)
+}
+
+.project-box-inside:hover > a > div > div {
+    transform: rotateY(180deg)
+}
