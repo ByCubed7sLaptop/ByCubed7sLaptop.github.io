@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +18,6 @@
             overflow: hidden;
         }
 
-        h1 {
-            position: absolute;
-            top: 20px;
-            text-align: center;
-            font-size: 2em;
-            color: #333;
-        }
-
         /* Dog container styling */
         .dog-container {
             position: relative;
@@ -34,8 +27,10 @@
         /* Dog image styling */
         #dog {
             width: 300px;
-            transition: transform 0.2s ease-out; /* Smooth transition for transformations */
+            transition: transform 0.2s ease-out;
+            /* Smooth transition for transformations */
             cursor: url("hand.png") 4 12, auto;
+            z-index: 100;
         }
 
         /* Pat animation (slight bounce) */
@@ -44,9 +39,17 @@
         }
 
         @keyframes bounce {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
 
         /* Rub animation (wiggle) */
@@ -55,33 +58,72 @@
         }
 
         @keyframes wiggle {
-            0%, 100% { transform: rotate(0); }
-            25% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
         }
 
         .unselectable {
-   -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
 
-   /*
+            /*
      Introduced in IE 10.
      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
    */
-   -ms-user-select: none;
-   user-select: none;
-}
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Heart particle styling */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 1.5rem;
+            transition: floatUp 2s linear forwards;
+            user-select: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-50px) scale(1.2);
+            }
+
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="dog-container unselectable">
+    <div class="dog-container unselectable" id="dog-container">
         <!-- Replace the source 'dog.png' with your actual dog image path -->
         <img id="dog" src="cube.png" alt="Cute Dog" draggable="false">
     </div>
 
     <script>
-        const dogImage = document.getElementById('dog');
+    const dogImage = document.getElementById('dog');
+        const dogContainer = document.getElementById('dog-container');
+        let rubTimeout;
+        let heartInterval;
 
         // Function for pat animation on click
         dogImage.addEventListener('click', () => {
@@ -94,12 +136,47 @@
         // Function for rub animation on mouseover
         dogImage.addEventListener('mousedown', () => {
             dogImage.classList.add('rub'); // Add 'rub' class
+
+            // Start showing hearts after 2 seconds
+            rubTimeout = setTimeout(() => {
+                heartInterval = setInterval(() => {
+                    createHeart();
+                }, 300); // Create a heart every 300ms
+            }, 2000);
         });
 
         // Remove rub animation on mouseout
         dogImage.addEventListener('mouseup', () => {
             dogImage.classList.remove('rub'); // Remove 'rub' class
+            clearTimeout(rubTimeout); // Clear the timeout
+            clearInterval(heartInterval); // Stop generating hearts
         });
+
+
+        // Function to create heart particles
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+
+            // Randomize position near the dog image
+            const x = Math.random() * 500 - 250; // Horizontal offset (-50px to 50px)
+            const y = Math.random() * 300 - 150; // Slight vertical randomness
+
+            heart.style.position = 'absolute';
+            heart.style.transform = `translate(${x}px, ${y}px)`;
+            heart.style.top = `50%`;
+            heart.style.left = `50%`;
+            heart.style.zindex = 10;
+
+            dogContainer.appendChild(heart);
+
+            // Remove the heart after animation ends
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        }
     </script>
 </body>
+
 </html>
