@@ -1,10 +1,33 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import {StrictMode} from "react";
+import ReactDOM from "react-dom/client";
+import {createRoot} from "react-dom/client";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import Home from "./pages/home/index";
+import Plasma from "./pages/plasma/index";
+
+import Banner from "./components/banner";
+import Footer from "./components/footer";
+
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+    <StrictMode>
+        <>
+            <BrowserRouter>
+                <Banner style={{backgroundColor: "var(--accent)"}}>
+                    <a href="./">Home</a>
+                    <a href="debug">Debug</a>
+                    <a href="blog">Blog</a>
+                </Banner>
+
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="plasma" element={<Plasma />} />
+                </Routes>
+
+                <Footer />
+            </BrowserRouter>
+        </>
+    </StrictMode>
+);

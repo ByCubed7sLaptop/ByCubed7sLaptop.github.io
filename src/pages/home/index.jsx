@@ -1,17 +1,13 @@
-"use client";
+import ProjectBox from "../../components/projectbox";
+import ImageCollectionRow from "../../components/imageCollectionRow";
+import Part from "../../components/part";
+import Article from "../../components/article";
+import Row from "../../components/row";
+import Subtitle from "../../components/subtitle";
+import Experience from "../../components/experience";
+import BackgroundImage from "../../components/backgroundImage";
 
-import Image from "next/image";
-import ProjectBox from "../../../components/projectbox";
-import ImageCollectionRow from "../../../components/imageCollectionRow";
-import Part from "../../../components/part";
-import Article from "../../../components/article";
-import Row from "../../../components/row";
-import Subtitle from "../../../components/subtitle";
-import Experience from "../../../components/experience";
-
-import BackgroundImage from "../../../components/backgroundImage";
-
-import {DesktopCapybara, Infected, WizardRogue} from "../../../data/projects";
+import {DesktopCapybara, Infected, WizardRogue} from "../../data/projects";
 
 export default function Index() {
     return (

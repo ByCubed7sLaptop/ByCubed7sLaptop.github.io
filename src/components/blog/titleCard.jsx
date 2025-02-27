@@ -1,4 +1,4 @@
-import Title from "../title";
+import Title from "./title";
 import Part from "../part";
 
 export default function TitleCard({children, style, project, dateClassName}) {
@@ -23,7 +23,7 @@ export default function TitleCard({children, style, project, dateClassName}) {
                 style={{
                     border: "2px solid #252e3f",
                     borderRadius: "8px",
-                    padding: "1.5rem 3rem",
+
                     lineHeight: "1.75rem",
                     color: "var(--text)",
                     fontSize: "1rem",
