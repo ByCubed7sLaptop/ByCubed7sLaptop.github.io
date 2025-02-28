@@ -6,6 +6,7 @@ import Row from "../components/row";
 import Subtitle from "../components/subtitle";
 import Experience from "../components/experience";
 import BackgroundImage from "../components/backgroundImage";
+import Dots from "../components/dots";
 
 import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
 
@@ -13,6 +14,7 @@ export default function Index() {
     return (
         <>
             <BackgroundImage src="pom/pom.png" />
+            <Dots style={{opacity: "0.7"}} />
 
             <Article>
                 <Part contentStyle={{minHeight: "10em"}}>
@@ -100,8 +102,6 @@ export default function Index() {
                         </div>
                     </Row>
                 </Part>
-
-                <Part style={{backgroundColor: "var(--accent)"}} />
 
                 <Part>
                     <ImageCollectionRow

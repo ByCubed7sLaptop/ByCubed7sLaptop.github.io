@@ -1,9 +1,6 @@
 import {useState, useEffect, useRef} from "react";
 
 export default function Contents({querySelector}) {
-    //return <div />;
-
-    const target = useRef(null);
     const [show, setShow] = useState(true);
     const [headings, setHeadings] = useState([]);
 
@@ -48,7 +45,6 @@ export default function Contents({querySelector}) {
                     position: "relative",
                     zIndex: "100"
                 }}
-                ref={target}
                 onClick={() => setShow(!show)}
             >
                 Contents

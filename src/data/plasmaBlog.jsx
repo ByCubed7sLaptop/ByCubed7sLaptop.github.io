@@ -55,7 +55,6 @@ I created a program, window and some vertices and then
 compiled a vertex & fragment shader to render a triangle
 on the screen.
 
-
 ~~~cpp
 std::vector<float> vertices = {
     -0.5f, -0.5f, 0.0f,
@@ -64,11 +63,10 @@ std::vector<float> vertices = {
 };
 ~~~
 
- ![](https://learnopengl.com/img/getting-started/hellotriangle.png)
+![](https://learnopengl.com/img/getting-started/hellotriangle.png)
 
 ## Fonts and Text
-
-TODO
+- TODO
 
 ## GameObjects
 
@@ -137,7 +135,7 @@ But it gets the job done for now.
 Created a generic Renderable class to be used in
 renderable objects, like textures and fonts.
 
-TODO: Add to
+- TODO: Add to
 
 ~~~cpp
 class Texture2D
@@ -393,7 +391,7 @@ creating 2 games over all, and seeing one all the way
 from production to release; And I have collected a
 substantial amount of knowledge in C++, planning &
 design, production management and motivation techniques.
-<br /> <br />
+
 One thing I hope to improve on in the future is my
 routine in publishing content and my social media usage
 in general. I will aim to work on this in my next

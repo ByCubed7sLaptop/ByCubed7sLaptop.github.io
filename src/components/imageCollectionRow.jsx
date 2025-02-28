@@ -1,4 +1,10 @@
-export default function ImageCollectionRow({images, style, imgStyle}) {
+export default function ImageCollectionRow({
+    images,
+    style,
+    imgStyle,
+    children,
+    ...rest
+}) {
     const containerStyle = {
         display: "flex"
     };
@@ -11,7 +17,7 @@ export default function ImageCollectionRow({images, style, imgStyle}) {
     };
 
     return (
-        <div style={{display: "flex", ...style}}>
+        <div style={{display: "flex", ...style}} {...rest}>
             {images.map((imageSrc, index) => (
                 <img
                     key={index}
@@ -21,6 +27,7 @@ export default function ImageCollectionRow({images, style, imgStyle}) {
                     alt={`Image ${index + 1}`}
                 />
             ))}
+            {children}
         </div>
     );
 }
