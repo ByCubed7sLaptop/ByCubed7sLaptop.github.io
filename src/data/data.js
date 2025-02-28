@@ -102,6 +102,30 @@ export class Project extends TimeSpan {
             this.markdown = `data/${projectName}Blog.jsx`;
     }
 
+    static Create({
+        startDate = null,
+        endDate = null,
+        displayName = "no displayName provided",
+        projectName = "no projectName provided",
+        description = "no description provided",
+        tags = "no tags provided",
+        imgPath = "default",
+        backgroundPath = "default",
+        markdown = "insert markdown here"
+    } = {}) {
+        return new Project(
+            startDate,
+            endDate,
+            displayName,
+            projectName,
+            description,
+            tags,
+            imgPath,
+            backgroundPath,
+            markdown
+        );
+    }
+
     toString() {
         return `${this.projectName}: ${this.description} (${super.toString()})`;
     }

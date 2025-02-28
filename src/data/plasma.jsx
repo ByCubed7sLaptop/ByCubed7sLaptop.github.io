@@ -599,4 +599,17 @@ project.
 
 `;
 
-export default blog;
+import {Project} from "./data";
+var DesktopCapybara = Project.Create({
+    startDate: new Date(2021, 9, 12),
+    endDate: new Date(2023, 2, 3),
+    displayName: "Plasma Engine",
+    projectName: "plasma",
+    description: "Game Engine Library & Desktop Capybara Simulator.",
+    tags: "C++, OpenGL, Programming",
+    imgPath: "projects/plasma/DesktopCapybara/SS Capybara wander2.gif",
+    backgroundPath: "default",
+    markdown: blog
+});
+
+export default DesktopCapybara;

@@ -8,8 +8,11 @@ import Plasma from "./pages/plasma";
 
 import Banner from "./components/banner";
 import Footer from "./components/footer";
+import Blog from "./components/blog/blog";
 
 import "./index.css";
+
+import {projects} from "./data/projects";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -23,7 +26,13 @@ createRoot(document.getElementById("root")).render(
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route path="plasma" element={<Plasma />} />
+                    {projects.map(project => (
+                        <Route
+                            key={`${project.projectName}`}
+                            path={`${project.projectName}`}
+                            element={<Blog project={project} />}
+                        />
+                    ))}
                 </Routes>
 
                 <Footer />
