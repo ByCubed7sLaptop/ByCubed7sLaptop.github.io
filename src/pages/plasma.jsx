@@ -114,6 +114,48 @@ export default function Index() {
                                         />
                                     );
 
+                                if (props.alt == "row4")
+                                    return (
+                                        <img
+                                            className={styles.img}
+                                            src={`../../${src}`}
+                                            style={{
+                                                width: "25%",
+                                                margin: "0",
+                                                float: "left"
+                                            }}
+                                            {...rest}
+                                        />
+                                    );
+
+                                if (props.alt == "row3")
+                                    return (
+                                        <img
+                                            className={styles.img}
+                                            src={`../../${src}`}
+                                            style={{
+                                                width: "33%",
+                                                margin: "0",
+                                                float: "left"
+                                            }}
+                                            {...rest}
+                                        />
+                                    );
+
+                                if (props.alt == "row2")
+                                    return (
+                                        <img
+                                            className={styles.img}
+                                            src={`../../${src}`}
+                                            style={{
+                                                width: "50%",
+                                                margin: "0",
+                                                float: "left"
+                                            }}
+                                            {...rest}
+                                        />
+                                    );
+
                                 return (
                                     <img
                                         className={styles.img}

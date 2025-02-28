@@ -63,7 +63,7 @@ std::vector<float> vertices = {
 };
 ~~~
 
-![](https://learnopengl.com/img/getting-started/hellotriangle.png)
+![](projects/plasma/learnopengl.com/hellotriangle.png)
 
 ## Fonts and Text
 
@@ -317,38 +317,113 @@ rendering component uses the tile types to determine
 which sprite to use for each tile, ensuring that the
 correct visual is applied.
 
-![](projects/plasma/imgs/20211126.gif)
-![](projects/plasma/imgs/20211127.png)
-![](projects/plasma/imgs/20211128%20abc.png)
+![row3](projects/plasma/imgs/20211126.gif)
+![row3](projects/plasma/imgs/20211127.png)
+![row3](projects/plasma/imgs/20211128%20abc.png)
 
 Using tilemaps offers several benefits:
 - Efficient storage: By using a 2D array to represent tile types, we can store a vast amount of data with minimal memory usage.
 - Fast access: With the rendering component, we can quickly retrieve and render tile data on the screen, creating a smooth gaming experience.
 - Flexibility: Tilemaps can be used to create a wide range of environments, from simple mazes to complex cityscapes.
 
-## Tiled, Rotations and Save data!
+# Tiled, Rotations and Save data!
+Dec 2, 2021
+
+To make map creation more accessible, I decided to integrate the Tiled editor.
+This enables users to create and import maps seamlessly into the simulation library.
+
+Using the Tiled editor's data format, we can load maps into our library and
+render them on screen.
+
+~~~cpp
+// Load a Tiled map into Plasma
+void loadMap(const std::string& filePath) {
+    // Parse the Tiled data file
+    auto mapData = parseTiledFile(filePath);
+
+    // Create entities and components for each layer in the map
+    for (const auto& layer : mapData.layers) {
+        createLayerEntities(layer);
+    }
+}
+~~~
+
+With the map data loaded, we can now convert it to a tilemap and render it screen
+using our resource manager.
 
 ![](projects/plasma/imgs/20211202.png)
 
-After some tilemap rework, I implemented pellets pickups
-and a simple score display. By around I had finished
-this, the deadline of the assignment was within a few
-days.
+
+# Scoring & Ghosts
+December 25, 2021 🎅🎄
+
+## Scoring
+
+The scoring was relativly simple, create a new gameobject, add a text component
+Now pacmans checks it's positional tile, if the tile contains a puc,
+add to the score and remove the tile.
 
 ![](projects/plasma/imgs/20211225.gif)
 
 
-# Hwnd, transparency and window styles!
+## Ghosts
 
-Nov 30
+## The Pac-Man Dossier
+
+The [Pac-Man Dossier](https://pacman.holenet.info/) by Jamey Pittman contains
+everything I could need in order to best replicate the ghosts behavours.
+Such as the intersection pathfinding, showcasing how each of the different
+ghosts chose different targeting positions, based on the player, state and other
+ghosts:
+
+[![row3](projects/plasma/pacman.holenet.info/TieBreakALL.png)](https://pacman.holenet.info/)
+[![row3](projects/plasma/pacman.holenet.info/Pinky2.png)](https://pacman.holenet.info/)
+[![row3](projects/plasma/pacman.holenet.info/InkyA.png)](https://pacman.holenet.info/)
+
+Implementing the movement was pretty simple, at an intesection find the
+direction with the lowest score, based off of certain criteria which differed
+depending on the ghost.
+Though that didn't stop any bugs from crawling in.
+
+![](projects/plasma/imgs/Ghost_Clip.gif)
+
+After some tilemap rework, I implemented pellets pickups
+and a simple score display. By around I had finished
+this, the deadline of the assignment was within a few
+days. I focused on code, documentation and presentation clean up.
+
+And it was finished! :D
+
+Though I still had another project I wanted to use this engine in but it needed
+some more functionality first..
+
+# Hwnd, transparency and window styles!
+February 27, 2022
 
 ## Messing around with Hwnd
 
-##### Inspired by the python tkinter snake game in highschool
-##### Trying to make pacman transparent
-##### Tab management
+The journey of this idea began with an inspiration during the deep caverns of
+the tkinter python documentation. During the time, I was making a snake game that
+used tkinter windows to display the snake and fruit on the screen, giving the
+effect of a transparent window. I've always wanted to try create it but never had
+the chance to mess with the Windows Hwnd API.
+
+My first challenge was to make the window's background transparent. I rearranged
+some of the initialization code and added it to the API to allow sending data to
+the underlying window.
 
 ![](projects/plasma/imgs/20220227%20wind.png)
+
+Next, I tackled the task of hiding the window from the taskbar and making the
+window fullscreen, effectively making it invisible apart from the rendered sprites.
+This required some documentation digging, but ultimately, I was able to achieve the desired effect.
+The red defines the windows bounds, so you can see it's working as intended~
+
+![](projects/plasma/imgs/20220227%20fullscreen.png)
+
+The pièce de résistance was making the window click-through-able. I wanted
+users to be able to interact with the underlying desktop without interrupting
+the apps behavior.
 
 Notice how mouse events now go straight through the
 pacman window and interacts with Visual Studio behind
@@ -356,15 +431,9 @@ it.
 
 ![video](projects/plasma/imgs/20220227%20click%20through.mp4)
 
-Getting the window to run fullscreen, the red here
-defines the windows bounds, so you can see it's working
-as intended~
 
-![](projects/plasma/imgs/20220227%20fullscreen.png)
 
 # Later Inspiration!
-
-??
 
 ## Capybaras
 
@@ -375,7 +444,7 @@ rodent native to South America; And I had mentioned on
 occation that I would add them to a project...
 eventually.
 
-![](projects/plasma/imgs/capybara.png)
+![](projects/plasma/DesktopCapybara/capybara.png)
 
 ## Desktop Goose
 
@@ -389,9 +458,8 @@ YOUTUBE@EQx6fyrZDWM
 This, and the ongoing popularity of Capybaras, inspired
 me to make a Capybara desktop buddy!
 
-# Desktop Capybara
 
-??
+# Desktop Capybara
 
 ## Here comes the boi
 
@@ -399,7 +467,7 @@ Drew up a small pixelated sprite for the capybara, I
 went for this style to synergize with it's potentially
 untidy movement and current lack of animations.
 
-![](projects/plasma/imgs/20220227%20the%20boi.png)
+![](projects/plasma/DesktopCapybara/20220227%20the%20boi.png)
 
 I found it overly saturated here and later softed the
 fur colour to a more lighter blonde.
@@ -409,11 +477,57 @@ now, ready to be rendered on the screen~ Below, I had
 forgotten about setting a colour and scale, making our
 boy into a cute small silhouette.
 
-![](projects/plasma/imgs/20220227%20small.png)
+![](projects/plasma/DesktopCapybara/20220227%20small.png)
 
-## AI
+## AI Part 2
 
-![](projects/plasma/imgs/20220303.gif)
+The capybara needs some sort of intelligence, to react to the environment
+surrounding it and to interact with the user.
+
+First I needed a way to hold it's state, and be able to change that state based
+off of some arbitrary actions, a finite state machine seemed to be a good choice
+for this.
+
+> "It is an abstract machine that can be in exactly one of a finite number of states at any given time. The FSM can change from one state to another in response to some inputs; [...] called a transition." -
+ [Wikipedia.org](https://en.wikipedia.org/wiki/Finite-state_machine)
+
+So I created a template class to easily create a functional FSM so that all of
+the state transistions happen under the hood.
+
+~~~cpp
+template<typename TStates, typename TActions>
+class FiniteStateMachine {
+    TStates currentState;
+    std::map<std::pair<TStates, TActions>, TStates> stateTable;
+    ...
+~~~
+
+The FiniteStateMachine class takes an Enum type of States and Actions, then you're
+able to define the table of all of the transitions.
+
+This is used in components to easily implement a set amount of states based off
+of a specfic value and react to certain events:
+
+~~~cpp
+enum CapybaraStates {
+	AAAAAAA, WANDER, STAND, FOLLOW, OFFSCREEN, EATING
+};
+
+enum CapybaraActions {
+	WANDERTICK, FOLLOWTICK, CLICK, WANDERED, OFFSCREENED, DRAGGING, SEEFOOD, ONFOOD
+};
+
+class CapybaraAI : public
+    Engine::Component,
+    Engine::FiniteStateMachine<CapybaraStates, CapybaraActions>
+{
+    ...
+~~~
+
+Adding that and some movement, waddles and turning we get a wonderful lil lad.
+
+![](projects/plasma/DesktopCapybara/20220303.gif)
+
 
 ## Hats & variety
 
@@ -423,14 +537,42 @@ kind of capybara would spawn: Slightly different size,
 fur colour, and most importantly a different hat. I
 designed a few hats.
 
-![](projects/plasma/imgs/20220603%20hats.png)
+Now each time you open the application, or spawn a new Capybara with different hats,
+sizes, and fur colors.
+
+![](projects/plasma/DesktopCapybara/20220603%20hats.png)
+
+
+## Optimizations
+
+One area where Plasma's performance was bottlenecked was in the component caching
+mechanism. When dealing with a vast number of entities, the engine iterated over
+each entity's components multiple times per frame. To alleviate this issue,
+I started caching frequently accessed components.
+
+Another optimization I added was entity pooling, which reduces the overhead
+associated with creating and destroying entities. By pre-allocating a pool of
+entities and reusing them as needed, I was able to significantly reduce memory
+allocations and deallocations during play.
+
+Stress testing (300k capybaras)
+
+![](projects/plasma/DesktopCapybara/10062022stresstesting.png)
+
+In the future, I eventually plan to implement more optimizations, such as a job
+queue or a task scheduler. This would allow the engine to run multiple tasks
+concurrently and ensure that updates are applied in the correct order.
+
+Another potential area of improvement is creating a load balancing for tasks and
+updates. This would allow the engine to optimize the performance by ensuring
+that more computationally expensive tasks are executed less often or over time.
 
 
 # Release!
 
 March 5, 2022
 
-![](projects/plasma/imgs/20220303%20itchiobanner.png)
+![](projects/plasma/DesktopCapybara/20220303%20itchiobanner.png)
 
 ITCH@1426955?bg_color=222222&amp;fg_color=ffffff&amp;border_color=363636
 
