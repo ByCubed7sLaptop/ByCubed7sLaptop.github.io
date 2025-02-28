@@ -302,7 +302,8 @@ protected:
 };
 ~~~
 
-## Tilemaps and Instancing
+# Tiled, Rotations and Save data!
+Dec 2, 2021
 
 Tilemaps allow for the creation of vast game worlds with
 a minimal amount of data. I implemented tilemaps using a
@@ -326,8 +327,7 @@ Using tilemaps offers several benefits:
 - Fast access: With the rendering component, we can quickly retrieve and render tile data on the screen, creating a smooth gaming experience.
 - Flexibility: Tilemaps can be used to create a wide range of environments, from simple mazes to complex cityscapes.
 
-# Tiled, Rotations and Save data!
-Dec 2, 2021
+## Tiled
 
 To make map creation more accessible, I decided to integrate the Tiled editor.
 This enables users to create and import maps seamlessly into the simulation library.

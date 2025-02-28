@@ -1,7 +1,6 @@
 import {Project, TimeSpan} from "./data";
 
-export const Projects = [];
-
+import desktopCapybaraMarkdown from "./plasmaBlog";
 export const DesktopCapybara = new Project(
     new Date(2021, 9, 12),
     new Date(2023, 2, 3),
@@ -9,9 +8,11 @@ export const DesktopCapybara = new Project(
     "plasma",
     "Game Engine Library & Desktop Capybara Simulator.",
     "C++, OpenGL, Programming",
-    "projects/plasma/DesktopCapybara/SS Capybara wander2.gif"
+    "projects/plasma/DesktopCapybara/SS Capybara wander2.gif",
+    "default",
+    desktopCapybaraMarkdown
 );
-Projects.push(DesktopCapybara);
+// Projects.push(DesktopCapybara);
 
 export const Infected = new Project(
     new Date(2023, 1, 13),
@@ -21,7 +22,7 @@ export const Infected = new Project(
     "The colaberative virtual reality, open world survival shooter with multiplayer!",
     "Godot 4, VR, Multiplayer"
 );
-Projects.push(Infected);
+// Projects.push(Infected);
 
 export const WizardRogue = new Project(
     new Date(2023, 1, 13),
@@ -31,4 +32,6 @@ export const WizardRogue = new Project(
     "A 2D action roguelite focusing on code modulization.",
     "Unity, Godot 3, Tiled, C#"
 );
-Projects.push(WizardRogue);
+// Projects.push(WizardRogue);
+
+// export const Projects = [];

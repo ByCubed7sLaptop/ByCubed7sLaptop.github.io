@@ -1,15 +1,10 @@
 import React from "react";
-import {useState, useEffect, useRef} from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import ProjectBox from "../components/projectbox";
-import ImageCollectionRow from "../components/imageCollectionRow";
 import Part from "../components/part";
 import Article from "../components/article";
-import Row from "../components/row";
 import Subtitle from "../components/subtitle";
-import Experience from "../components/experience";
 import BackgroundImage from "../components/backgroundImage";
 import Itchio from "../components/itchio";
 import Youtube from "../components/youtube";
@@ -22,12 +17,11 @@ import Contents from "../components/blog/contents";
 import styles from "./blog.module.css";
 
 import {DesktopCapybara} from "../data/projects";
-import markdown from "../data/plasmaBlog";
 
 export default function Index() {
     return (
         <>
-            <BackgroundImage src="../../projects/plasma/DesktopCapybara/Capybara%20Wallpaper.png" />
+            <BackgroundImage src={`../../${DesktopCapybara.backgroundPath}`} />
             <Article>
                 <TitleCard
                     project={DesktopCapybara}
@@ -208,7 +202,7 @@ export default function Index() {
                             }
                         }}
                     >
-                        {markdown}
+                        {DesktopCapybara.markdown}
                     </Markdown>
                 </Part>
             </Article>

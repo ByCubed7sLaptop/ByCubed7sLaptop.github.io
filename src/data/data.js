@@ -77,7 +77,9 @@ export class Project extends TimeSpan {
         projectName,
         description,
         tags,
-        imgPath = "tile"
+        imgPath = "default",
+        backgroundPath = "default",
+        markdown = ""
     ) {
         super(startDate, endDate);
         this.displayName = displayName;
@@ -86,10 +88,18 @@ export class Project extends TimeSpan {
         this.tags = tags;
 
         this.imgPath = `${imgPath}`;
-        if (imgPath == "tile")
+        if (imgPath == "default")
             this.imgPath = `projects/${projectName}/tile.gif`;
         else if (imgPath == "card")
             this.imgPath = `projects/${projectName}/card.png`;
+
+        this.backgroundPath = backgroundPath;
+        if (backgroundPath == "default")
+            this.backgroundPath = `projects/${projectName}/background.png`;
+
+        this.markdown = markdown;
+        if (markdown == "default")
+            this.markdown = `data/${projectName}Blog.jsx`;
     }
 
     toString() {
