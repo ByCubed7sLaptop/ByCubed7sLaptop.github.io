@@ -9,7 +9,7 @@ export const DesktopCapybara = new Project(
     "plasma",
     "Game Engine Library & Desktop Capybara Simulator.",
     "C++, OpenGL, Programming",
-    "projects/plasma/imgs/SS Capybara wander2.gif"
+    "projects/plasma/DesktopCapybara/SS Capybara wander2.gif"
 );
 Projects.push(DesktopCapybara);
 

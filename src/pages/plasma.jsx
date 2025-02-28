@@ -27,7 +27,7 @@ import markdown from "../data/plasmaBlog";
 export default function Index() {
     return (
         <>
-            <BackgroundImage src="../../projects/plasma/imgs/Capybara%20Wallpaper.png" />
+            <BackgroundImage src="../../projects/plasma/DesktopCapybara/Capybara%20Wallpaper.png" />
             <Article>
                 <TitleCard
                     project={DesktopCapybara}
