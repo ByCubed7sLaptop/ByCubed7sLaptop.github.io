@@ -66,7 +66,40 @@ std::vector<float> vertices = {
 ![](https://learnopengl.com/img/getting-started/hellotriangle.png)
 
 ## Fonts and Text
-- TODO
+
+I then implemented a system for handling fonts and text. This includes
+loading various font types, rendering text on the screen, and even
+allowing for dynamic text updates.
+
+One of the key features is the Font class, which serves as a singleton
+responsible for managing all font-related operations. It handles tasks such as:
+
+Loading font files from disk
+Caching frequently used fonts for improved performance
+Rendering text to the screen using advanced techniques
+For rendering, we've developed an TextRenderer component that integrates
+seamlessly with our ECS (Entity-Component-System) architecture. This allows
+us to easily attach this component to any entity in the game world and have
+it render text accordingly.
+
+Here's a code snippet demonstrating how you can use the Font class to
+display some text:
+
+~~~cpp
+void Game::RenderText()
+{
+    Font* font = Font::GetInstance();
+    std::string text = "Hello, World!";
+
+    // Render the text at position (200, 200)
+    font->DrawText(text, glm::vec2(200.0f, 200.0f),
+                  glm::vec3(1.0f, 1.0f, 1.0f)); // Color
+}
+~~~
+When implementing text rendering, I also considered other aspects such as:
+Font sizes and text alignment (centered, left-aligned, right-aligned).
+Support for both TTF and OTF font formats.
+Eventual styles such as bold, italic, etc.
 
 ## GameObjects
 
@@ -132,27 +165,30 @@ But it gets the job done for now.
 
 ## Sprites and Animations
 
-Created a generic Renderable class to be used in
-renderable objects, like textures and fonts.
-
-- TODO: Add to
+I created a generic Renderable class to be used in renderable objects, like
+textures and fonts. This change simplifies our usage by removing the need for
+a referenced SpriteRenderer instance.
 
 ~~~cpp
-class Texture2D
-: public Resource<Texture2D>, public Renderable<Texture2D>
-...
+class Texture2D : public Resource<Texture2D>, public Renderable<Texture2D> {
+    // ...
+};
+
+class Text : public Resource<Font>, public Renderable<Text> {
+    // ...
+};
 ~~~
 
-Which changes our usage from:
+With this new design, we can now draw textures and text directly using their
+respective classes. This modification not only makes our code more readable
+but also more maintainable.
 
 ~~~cpp
+// Old
 renderer.sprite.DrawSprite(...);
 renderer.text.DrawText(...);
-~~~
 
-to
-
-~~~cpp
+// New
 Texture2D::Draw(...);
 Text::Draw(...);
 ~~~
@@ -160,6 +196,24 @@ Text::Draw(...);
 Now we no longer need a referenced SpriteRenderer
 instance in order to render a texture on to the screen.
 Also making it easier to read. 😄
+
+However, we can further improve the code by adding a Resource manager that
+automatically deals with the creation and caching of resources.
+
+~~~cpp
+// Resource loads the font into memory
+auto* fontA = Font::load("assets/fonts/arial.ttf", "arial");
+
+// ...
+
+// These are equivalent, as font has already been loaded
+auto* fontB = Font::load("assets/fonts/arial.ttf", "arial");
+auto* fontB = Font::get("arial");
+~~~
+
+By doing this, we can decouple the creation of objects from their usage
+making the code more modular and easier to extend.
+
 
 ## Component Oriented Programming
 
@@ -267,6 +321,11 @@ correct visual is applied.
 ![](projects/plasma/imgs/20211127.png)
 ![](projects/plasma/imgs/20211128%20abc.png)
 
+Using tilemaps offers several benefits:
+- Efficient storage: By using a 2D array to represent tile types, we can store a vast amount of data with minimal memory usage.
+- Fast access: With the rendering component, we can quickly retrieve and render tile data on the screen, creating a smooth gaming experience.
+- Flexibility: Tilemaps can be used to create a wide range of environments, from simple mazes to complex cityscapes.
+
 ## Tiled, Rotations and Save data!
 
 ![](projects/plasma/imgs/20211202.png)
@@ -285,10 +344,9 @@ Nov 30
 
 ## Messing around with Hwnd
 
-- Inspired by the python tkinter snake game in
-highschool
-- Trying to make pacman transparent
-- Tab management
+##### Inspired by the python tkinter snake game in highschool
+##### Trying to make pacman transparent
+##### Tab management
 
 ![](projects/plasma/imgs/20220227%20wind.png)
 
