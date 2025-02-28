@@ -4,7 +4,6 @@ import {createRoot} from "react-dom/client";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Home from "./pages/home";
-import Plasma from "./pages/plasma";
 
 import Banner from "./components/banner";
 import Footer from "./components/footer";
