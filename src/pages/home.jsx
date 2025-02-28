@@ -21,16 +21,19 @@ export default function Index() {
                     <div
                         style={{
                             float: "left",
-                            width: "50%",
+                            width: "48%",
                             height: "100%",
-                            marginTop: "4em"
+                            marginTop: "4em",
+                            marginRight: "2%"
                         }}
                     >
                         <h1
                             style={{
-                                fontSize: "2em",
+                                fontSize: "3em",
                                 letterSpacing: "-0.05em",
-                                float: "right"
+                                float: "right",
+                                lineHeight: "50px",
+                                textAlign: "right"
                             }}
                         >
                             <span style={{color: "purple"}}>
