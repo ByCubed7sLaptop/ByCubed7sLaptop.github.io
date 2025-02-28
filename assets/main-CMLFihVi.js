@@ -153,7 +153,6 @@ I created a program, window and some vertices and then
 compiled a vertex & fragment shader to render a triangle
 on the screen.
 
-
 ~~~cpp
 std::vector<float> vertices = {
     -0.5f, -0.5f, 0.0f,
@@ -162,11 +161,43 @@ std::vector<float> vertices = {
 };
 ~~~
 
- ![](https://learnopengl.com/img/getting-started/hellotriangle.png)
+![](https://learnopengl.com/img/getting-started/hellotriangle.png)
 
 ## Fonts and Text
 
-TODO
+I then implemented a system for handling fonts and text. This includes
+loading various font types, rendering text on the screen, and even
+allowing for dynamic text updates.
+
+One of the key features is the Font class, which serves as a singleton
+responsible for managing all font-related operations. It handles tasks such as:
+
+Loading font files from disk
+Caching frequently used fonts for improved performance
+Rendering text to the screen using advanced techniques
+For rendering, we've developed an TextRenderer component that integrates
+seamlessly with our ECS (Entity-Component-System) architecture. This allows
+us to easily attach this component to any entity in the game world and have
+it render text accordingly.
+
+Here's a code snippet demonstrating how you can use the Font class to
+display some text:
+
+~~~cpp
+void Game::RenderText()
+{
+    Font* font = Font::GetInstance();
+    std::string text = "Hello, World!";
+
+    // Render the text at position (200, 200)
+    font->DrawText(text, glm::vec2(200.0f, 200.0f),
+                  glm::vec3(1.0f, 1.0f, 1.0f)); // Color
+}
+~~~
+When implementing text rendering, I also considered other aspects such as:
+Font sizes and text alignment (centered, left-aligned, right-aligned).
+Support for both TTF and OTF font formats.
+Eventual styles such as bold, italic, etc.
 
 ## GameObjects
 
@@ -232,27 +263,30 @@ But it gets the job done for now.
 
 ## Sprites and Animations
 
-Created a generic Renderable class to be used in
-renderable objects, like textures and fonts.
-
-TODO: Add to
+I created a generic Renderable class to be used in renderable objects, like
+textures and fonts. This change simplifies our usage by removing the need for
+a referenced SpriteRenderer instance.
 
 ~~~cpp
-class Texture2D
-: public Resource<Texture2D>, public Renderable<Texture2D>
-...
+class Texture2D : public Resource<Texture2D>, public Renderable<Texture2D> {
+    // ...
+};
+
+class Text : public Resource<Font>, public Renderable<Text> {
+    // ...
+};
 ~~~
 
-Which changes our usage from:
+With this new design, we can now draw textures and text directly using their
+respective classes. This modification not only makes our code more readable
+but also more maintainable.
 
 ~~~cpp
+// Old
 renderer.sprite.DrawSprite(...);
 renderer.text.DrawText(...);
-~~~
 
-to
-
-~~~cpp
+// New
 Texture2D::Draw(...);
 Text::Draw(...);
 ~~~
@@ -260,6 +294,24 @@ Text::Draw(...);
 Now we no longer need a referenced SpriteRenderer
 instance in order to render a texture on to the screen.
 Also making it easier to read. 😄
+
+However, we can further improve the code by adding a Resource manager that
+automatically deals with the creation and caching of resources.
+
+~~~cpp
+// Resource loads the font into memory
+auto* fontA = Font::load("assets/fonts/arial.ttf", "arial");
+
+// ...
+
+// These are equivalent, as font has already been loaded
+auto* fontB = Font::load("assets/fonts/arial.ttf", "arial");
+auto* fontB = Font::get("arial");
+~~~
+
+By doing this, we can decouple the creation of objects from their usage
+making the code more modular and easier to extend.
+
 
 ## Component Oriented Programming
 
@@ -367,6 +419,11 @@ correct visual is applied.
 ![](projects/plasma/imgs/20211127.png)
 ![](projects/plasma/imgs/20211128%20abc.png)
 
+Using tilemaps offers several benefits:
+- Efficient storage: By using a 2D array to represent tile types, we can store a vast amount of data with minimal memory usage.
+- Fast access: With the rendering component, we can quickly retrieve and render tile data on the screen, creating a smooth gaming experience.
+- Flexibility: Tilemaps can be used to create a wide range of environments, from simple mazes to complex cityscapes.
+
 ## Tiled, Rotations and Save data!
 
 ![](projects/plasma/imgs/20211202.png)
@@ -385,10 +442,9 @@ Nov 30
 
 ## Messing around with Hwnd
 
-- Inspired by the python tkinter snake game in
-highschool
-- Trying to make pacman transparent
-- Tab management
+##### Inspired by the python tkinter snake game in highschool
+##### Trying to make pacman transparent
+##### Tab management
 
 ![](projects/plasma/imgs/20220227%20wind.png)
 
@@ -491,10 +547,10 @@ creating 2 games over all, and seeing one all the way
 from production to release; And I have collected a
 substantial amount of knowledge in C++, planning &
 design, production management and motivation techniques.
-<br /> <br />
+
 One thing I hope to improve on in the future is my
 routine in publishing content and my social media usage
 in general. I will aim to work on this in my next
 project.
 
-`;function P0(){return q.jsxs(q.Fragment,{children:[q.jsx(hC,{src:"../../projects/plasma/imgs/Capybara%20Wallpaper.png"}),q.jsxs(bC,{children:[q.jsx(N0,{project:RC,dateClassName:Bn.date}),q.jsx(O0,{querySelector:`.${Bn.subtitle}, .${Bn.caption}`}),q.jsx(ir,{contentClassName:Bn.part,children:q.jsx(Nx,{remarkPlugins:[[Bw,{singleTilde:!1}]],components:{h1(t){const{node:a,...i}=t;return q.jsxs(q.Fragment,{children:[q.jsx("hr",{className:Bn.hr}),q.jsx(nl,{className:Bn.subtitle,...i})]})},h2(t){const{node:a,...i}=t;return q.jsx(Yw,{className:Bn.caption,...i})},p(t){const{node:a,children:i,...o}=t;var s="";return s=/ITCH@(.+)/.exec(i||""),s?q.jsx(Fw,{embed:s[1],className:Bn.img,...o}):(s=/YOUTUBE@(.+)/.exec(i||""),s?q.jsx(Gw,{embed:s[1],className:Bn.img,...o}):q.jsx("div",{className:Bn.text,children:i,...o}))},img(t){const{node:a,src:i,...o}=t;return t.alt=="video"?q.jsx("video",{muted:!0,autoPlay:"autoplay",className:Bn.img,src:`../../${i}`,loop:!0,...o}):q.jsx("img",{className:Bn.img,src:`../../${i}`,...o})},ul(t){const{node:a,...i}=t;return q.jsx("ul",{style:{color:"#ff9999",backgroundColor:"black"},...i})},code(t){const{children:a,className:i,node:o,...s}=t,c=/language-(\w+)/.exec(i||"");return c?q.jsx(C0,{...s,PreTag:"div",children:String(a).replace(/\n$/,""),language:"language-"+c[1]}):q.jsx("code",{...s,className:i,children:a})}},children:w0})})]})]})}const k0="_nav_vhi8n_1",U0="_navHeader_vhi8n_15",B0="_navBtn_vhi8n_37",F0="_navLinks_vhi8n_45",G0="_navCheck_vhi8n_79",Y0="_brand_vhi8n_179",Ti={nav:k0,navHeader:U0,navBtn:B0,navLinks:F0,navCheck:G0,brand:Y0};function q0({style:t,children:a}){return q.jsxs("header",{role:"banner",className:Ti.nav,style:t,children:[q.jsx("input",{type:"checkbox",className:Ti.navCheck,id:"navCheck"}),q.jsx("div",{className:Ti.navHeader}),q.jsx("div",{className:Ti.navBtn,children:q.jsxs("label",{htmlFor:"navCheck",children:[q.jsx("span",{}),q.jsx("span",{}),q.jsx("span",{})]})}),q.jsx("div",{className:Ti.navLinks,children:a}),q.jsx("h1",{className:Ti.brand,children:"ETHAN THOMAS"})]})}const Sp={username:"ByCubed7sLaptop",link:"https://github.com/ByCubed7sLaptop/",img:"https://avatars.githubusercontent.com/u/179627620?v=4"};function H0({style:t,children:a}){return q.jsx("div",{style:{backgroundColor:"var(--accent)",color:"#fff",padding:"2rem 1rem",marginTop:"12rem"},children:q.jsx("div",{style:{flexGrow:"1",margin:"0 auto",position:"relative",width:"auto"},children:q.jsxs("div",{style:{textAlign:"center"},children:[q.jsx("a",{href:Sp.link,children:q.jsx("img",{src:Sp.img,alt:"Logo",style:{maxWidth:"5em"}})}),q.jsx("div",{children:Sp.username})]})})})}UO.createRoot(document.getElementById("root")).render(q.jsx($.StrictMode,{children:q.jsx(q.Fragment,{children:q.jsxs(jv,{children:[q.jsxs(q0,{style:{backgroundColor:"var(--accent)"},children:[q.jsx("a",{href:"./",children:"Home"}),q.jsx("a",{href:"debug",children:"Debug"}),q.jsx("a",{href:"blog",children:"Blog"})]}),q.jsxs(Av,{children:[q.jsx(bp,{exact:!0,path:"/",element:q.jsx(pA,{})}),q.jsx(bp,{path:"plasma",element:q.jsx(P0,{})})]}),q.jsx(H0,{})]})})}));
+`;function P0(){return q.jsxs(q.Fragment,{children:[q.jsx(hC,{src:"../../projects/plasma/imgs/Capybara%20Wallpaper.png"}),q.jsxs(bC,{children:[q.jsx(N0,{project:RC,dateClassName:Bn.date}),q.jsx(O0,{querySelector:`.${Bn.subtitle}, .${Bn.caption}`}),q.jsx(ir,{contentClassName:Bn.part,children:q.jsx(Nx,{remarkPlugins:[[Bw,{singleTilde:!1}]],components:{h1(t){const{node:a,...i}=t;return q.jsxs(q.Fragment,{children:[q.jsx("hr",{className:Bn.hr}),q.jsx(nl,{className:Bn.subtitle,...i})]})},h2(t){const{node:a,...i}=t;return q.jsx(Yw,{className:Bn.caption,...i})},p(t){const{node:a,children:i,...o}=t;var s="";return s=/ITCH@(.+)/.exec(i||""),s?q.jsx(Fw,{embed:s[1],className:Bn.img,...o}):(s=/YOUTUBE@(.+)/.exec(i||""),s?q.jsx(Gw,{embed:s[1],className:Bn.img,...o}):q.jsx("div",{className:Bn.text,children:i,...o}))},img(t){const{node:a,src:i,...o}=t;return t.alt=="video"?q.jsx("video",{muted:!0,autoPlay:"autoplay",className:Bn.img,src:`../../${i}`,loop:!0,...o}):q.jsx("img",{className:Bn.img,src:`../../${i}`,...o})},h5(t){const{node:a,...i}=t;return q.jsx("div",{style:{color:"#ff9999",backgroundColor:"black"},...i})},code(t){const{children:a,className:i,node:o,...s}=t,c=/language-(\w+)/.exec(i||"");return c?q.jsx(C0,{...s,PreTag:"div",children:String(a).replace(/\n$/,""),language:"language-"+c[1]}):q.jsx("code",{...s,className:i,children:a})}},children:w0})})]})]})}const k0="_nav_vhi8n_1",U0="_navHeader_vhi8n_15",B0="_navBtn_vhi8n_37",F0="_navLinks_vhi8n_45",G0="_navCheck_vhi8n_79",Y0="_brand_vhi8n_179",Ti={nav:k0,navHeader:U0,navBtn:B0,navLinks:F0,navCheck:G0,brand:Y0};function q0({style:t,children:a}){return q.jsxs("header",{role:"banner",className:Ti.nav,style:t,children:[q.jsx("input",{type:"checkbox",className:Ti.navCheck,id:"navCheck"}),q.jsx("div",{className:Ti.navHeader}),q.jsx("div",{className:Ti.navBtn,children:q.jsxs("label",{htmlFor:"navCheck",children:[q.jsx("span",{}),q.jsx("span",{}),q.jsx("span",{})]})}),q.jsx("div",{className:Ti.navLinks,children:a}),q.jsx("h1",{className:Ti.brand,children:"ETHAN THOMAS"})]})}const Sp={username:"ByCubed7sLaptop",link:"https://github.com/ByCubed7sLaptop/",img:"https://avatars.githubusercontent.com/u/179627620?v=4"};function H0({style:t,children:a}){return q.jsx("div",{style:{backgroundColor:"var(--accent)",color:"#fff",padding:"2rem 1rem",marginTop:"12rem"},children:q.jsx("div",{style:{flexGrow:"1",margin:"0 auto",position:"relative",width:"auto"},children:q.jsxs("div",{style:{textAlign:"center"},children:[q.jsx("a",{href:Sp.link,children:q.jsx("img",{src:Sp.img,alt:"Logo",style:{maxWidth:"5em"}})}),q.jsx("div",{children:Sp.username})]})})})}UO.createRoot(document.getElementById("root")).render(q.jsx($.StrictMode,{children:q.jsx(q.Fragment,{children:q.jsxs(jv,{children:[q.jsxs(q0,{style:{backgroundColor:"var(--accent)"},children:[q.jsx("a",{href:"./",children:"Home"}),q.jsx("a",{href:"debug",children:"Debug"}),q.jsx("a",{href:"blog",children:"Blog"})]}),q.jsxs(Av,{children:[q.jsx(bp,{exact:!0,path:"/",element:q.jsx(pA,{})}),q.jsx(bp,{path:"plasma",element:q.jsx(P0,{})})]}),q.jsx(H0,{})]})})}));
