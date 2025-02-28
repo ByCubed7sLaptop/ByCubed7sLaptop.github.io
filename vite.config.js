@@ -13,7 +13,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                plasma: resolve(__dirname, "plasma/index.html")
+                404: resolve(__dirname, "404.html")
+                //plasma: resolve(__dirname, "plasma/index.html")
             }
         }
     }

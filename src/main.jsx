@@ -20,16 +20,14 @@ createRoot(document.getElementById("root")).render(
             <BrowserRouter>
                 <Banner style={{backgroundColor: "var(--accent)"}}>
                     <a href="./">Home</a>
-                    <a href="debug">Debug</a>
-                    <a href="blog">Blog</a>
                 </Banner>
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     {projects.map(project => (
                         <Route
-                            key={`${project.projectName}`}
-                            path={`${project.projectName}`}
+                            key={project.projectName}
+                            path={project.projectName}
                             element={<Blog project={project} />}
                         />
                     ))}
