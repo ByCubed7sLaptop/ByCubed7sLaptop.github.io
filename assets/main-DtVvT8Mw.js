@@ -217,7 +217,7 @@ void Game::Render()
 ~~~
 
 
-![](./projects/plasma/imgs/20211125.png)
+![](projects/plasma/imgs/20211125.png)
 
 The 600+ fps here isn't particularly great on the grounds
 that we're only rendering a single stationary sprite.
@@ -390,19 +390,19 @@ highschool
 - Trying to make pacman transparent
 - Tab management
 
-![](./projects/plasma/imgs/20220227%20wind.png)
+![](projects/plasma/imgs/20220227%20wind.png)
 
 Notice how mouse events now go straight through the
 pacman window and interacts with Visual Studio behind
 it.
 
-![video](./projects/plasma/imgs/20220227%20click%20through.mp4)
+![video](projects/plasma/imgs/20220227%20click%20through.mp4)
 
 Getting the window to run fullscreen, the red here
 defines the windows bounds, so you can see it's working
 as intended~
 
-![](./projects/plasma/imgs/20220227%20fullscreen.png)
+![](projects/plasma/imgs/20220227%20fullscreen.png)
 
 # Later Inspiration!
 
@@ -417,7 +417,7 @@ rodent native to South America; And I had mentioned on
 occation that I would add them to a project...
 eventually.
 
-![](./projects/plasma/imgs/capybara.png)
+![](projects/plasma/imgs/capybara.png)
 
 ## Desktop Goose
 
@@ -441,7 +441,7 @@ Drew up a small pixelated sprite for the capybara, I
 went for this style to synergize with it's potentially
 untidy movement and current lack of animations.
 
-![](./projects/plasma/imgs/20220227%20the%20boi.png)
+![](projects/plasma/imgs/20220227%20the%20boi.png)
 
 I found it overly saturated here and later softed the
 fur colour to a more lighter blonde.
@@ -451,11 +451,11 @@ now, ready to be rendered on the screen~ Below, I had
 forgotten about setting a colour and scale, making our
 boy into a cute small silhouette.
 
-![](./projects/plasma/imgs/20220227%20small.png)
+![](projects/plasma/imgs/20220227%20small.png)
 
 ## AI
 
-![](./projects/plasma/imgs/20220303.gif)
+![](projects/plasma/imgs/20220303.gif)
 
 ## Hats & variety
 
@@ -465,14 +465,14 @@ kind of capybara would spawn: Slightly different size,
 fur colour, and most importantly a different hat. I
 designed a few hats.
 
-![](./projects/plasma/imgs/20220603%20hats.png)
+![](projects/plasma/imgs/20220603%20hats.png)
 
 
 # Release!
 
 March 5, 2022
 
-![](./projects/plasma/imgs/20220303%20itchiobanner.png)
+![](projects/plasma/imgs/20220303%20itchiobanner.png)
 
 ITCH@1426955?bg_color=222222&amp;fg_color=ffffff&amp;border_color=363636
 
@@ -497,4 +497,4 @@ routine in publishing content and my social media usage
 in general. I will aim to work on this in my next
 project.
 
-`;function w0(){return q.jsxs(q.Fragment,{children:[q.jsx(hC,{src:"projects/plasma/imgs/Capybara%20Wallpaper.png"}),q.jsxs(bC,{children:[q.jsx(N0,{project:RC,dateClassName:Bn.date}),q.jsx(y0,{querySelector:`.${Bn.subtitle}, .${Bn.caption}`}),q.jsx(Ia,{contentClassName:Bn.part,children:q.jsx(Nx,{remarkPlugins:[[Uw,{singleTilde:!1}]],components:{h1(t){const{node:a,...i}=t;return q.jsxs(q.Fragment,{children:[q.jsx("hr",{className:Bn.hr}),q.jsx(nl,{className:Bn.subtitle,...i})]})},h2(t){const{node:a,...i}=t;return q.jsx(Gw,{className:Bn.caption,...i})},p(t){const{node:a,children:i,...o}=t;var s="";return s=/ITCH@(.+)/.exec(i||""),s?q.jsx(Bw,{embed:s[1],className:Bn.img,...o}):(s=/YOUTUBE@(.+)/.exec(i||""),s?q.jsx(Fw,{embed:s[1],className:Bn.img,...o}):q.jsx("div",{className:Bn.text,children:i,...o}))},img(t){const{node:a,...i}=t;return t.alt=="video"?q.jsx("video",{muted:!0,autoPlay:"autoplay",className:Bn.img,loop:!0,...i}):q.jsx("img",{className:Bn.img,...i})},ul(t){const{node:a,...i}=t;return q.jsx("ul",{style:{color:"#ff9999",backgroundColor:"black"},...i})},code(t){const{children:a,className:i,node:o,...s}=t,c=/language-(\w+)/.exec(i||"");return c?q.jsx(R0,{...s,PreTag:"div",children:String(a).replace(/\n$/,""),language:"language-"+c[1]}):q.jsx("code",{...s,className:i,children:a})}},children:L0})})]})]})}const P0="_nav_vhi8n_1",k0="_navHeader_vhi8n_15",U0="_navBtn_vhi8n_37",B0="_navLinks_vhi8n_45",F0="_navCheck_vhi8n_79",G0="_brand_vhi8n_179",Ti={nav:P0,navHeader:k0,navBtn:U0,navLinks:B0,navCheck:F0,brand:G0};function Y0({style:t,children:a}){return q.jsxs("header",{role:"banner",className:Ti.nav,style:t,children:[q.jsx("input",{type:"checkbox",className:Ti.navCheck,id:"navCheck"}),q.jsx("div",{className:Ti.navHeader}),q.jsx("div",{className:Ti.navBtn,children:q.jsxs("label",{htmlFor:"navCheck",children:[q.jsx("span",{}),q.jsx("span",{}),q.jsx("span",{})]})}),q.jsx("div",{className:Ti.navLinks,children:a}),q.jsx("h1",{className:Ti.brand,children:"ETHAN THOMAS"})]})}const Sp={username:"ByCubed7sLaptop",link:"https://github.com/ByCubed7sLaptop/",img:"https://avatars.githubusercontent.com/u/179627620?v=4"};function q0({style:t,children:a}){return q.jsx("div",{style:{backgroundColor:"var(--accent)",color:"#fff",padding:"2rem 1rem",marginTop:"12rem"},children:q.jsx("div",{style:{flexGrow:"1",margin:"0 auto",position:"relative",width:"auto"},children:q.jsxs("div",{style:{textAlign:"center"},children:[q.jsx("a",{href:Sp.link,children:q.jsx("img",{src:Sp.img,alt:"Logo",style:{maxWidth:"5em"}})}),q.jsx("div",{children:Sp.username})]})})})}UO.createRoot(document.getElementById("root")).render(q.jsx($.StrictMode,{children:q.jsx(q.Fragment,{children:q.jsxs(jv,{children:[q.jsxs(Y0,{style:{backgroundColor:"var(--accent)"},children:[q.jsx("a",{href:"./",children:"Home"}),q.jsx("a",{href:"debug",children:"Debug"}),q.jsx("a",{href:"blog",children:"Blog"})]}),q.jsxs(Av,{children:[q.jsx(bp,{exact:!0,path:"/",element:q.jsx(mA,{})}),q.jsx(bp,{path:"plasma",element:q.jsx(w0,{})})]}),q.jsx(q0,{})]})})}));
+`;function w0(){return q.jsxs(q.Fragment,{children:[q.jsx(hC,{src:"../../projects/plasma/imgs/Capybara%20Wallpaper.png"}),import.meta.url,q.jsxs(bC,{children:[q.jsx(N0,{project:RC,dateClassName:Bn.date}),q.jsx(y0,{querySelector:`.${Bn.subtitle}, .${Bn.caption}`}),q.jsx(Ia,{contentClassName:Bn.part,children:q.jsx(Nx,{remarkPlugins:[[Uw,{singleTilde:!1}]],components:{h1(t){const{node:a,...i}=t;return q.jsxs(q.Fragment,{children:[q.jsx("hr",{className:Bn.hr}),q.jsx(nl,{className:Bn.subtitle,...i})]})},h2(t){const{node:a,...i}=t;return q.jsx(Gw,{className:Bn.caption,...i})},p(t){const{node:a,children:i,...o}=t;var s="";return s=/ITCH@(.+)/.exec(i||""),s?q.jsx(Bw,{embed:s[1],className:Bn.img,...o}):(s=/YOUTUBE@(.+)/.exec(i||""),s?q.jsx(Fw,{embed:s[1],className:Bn.img,...o}):q.jsx("div",{className:Bn.text,children:i,...o}))},img(t){const{node:a,src:i,...o}=t;return t.alt=="video"?q.jsx("video",{muted:!0,autoPlay:"autoplay",className:Bn.img,src:`../../${i}`,loop:!0,...o}):q.jsx("img",{className:Bn.img,src:`../../${i}`,...o})},ul(t){const{node:a,...i}=t;return q.jsx("ul",{style:{color:"#ff9999",backgroundColor:"black"},...i})},code(t){const{children:a,className:i,node:o,...s}=t,c=/language-(\w+)/.exec(i||"");return c?q.jsx(R0,{...s,PreTag:"div",children:String(a).replace(/\n$/,""),language:"language-"+c[1]}):q.jsx("code",{...s,className:i,children:a})}},children:L0})})]})]})}const P0="_nav_vhi8n_1",k0="_navHeader_vhi8n_15",U0="_navBtn_vhi8n_37",B0="_navLinks_vhi8n_45",F0="_navCheck_vhi8n_79",G0="_brand_vhi8n_179",Ti={nav:P0,navHeader:k0,navBtn:U0,navLinks:B0,navCheck:F0,brand:G0};function Y0({style:t,children:a}){return q.jsxs("header",{role:"banner",className:Ti.nav,style:t,children:[q.jsx("input",{type:"checkbox",className:Ti.navCheck,id:"navCheck"}),q.jsx("div",{className:Ti.navHeader}),q.jsx("div",{className:Ti.navBtn,children:q.jsxs("label",{htmlFor:"navCheck",children:[q.jsx("span",{}),q.jsx("span",{}),q.jsx("span",{})]})}),q.jsx("div",{className:Ti.navLinks,children:a}),q.jsx("h1",{className:Ti.brand,children:"ETHAN THOMAS"})]})}const Sp={username:"ByCubed7sLaptop",link:"https://github.com/ByCubed7sLaptop/",img:"https://avatars.githubusercontent.com/u/179627620?v=4"};function q0({style:t,children:a}){return q.jsx("div",{style:{backgroundColor:"var(--accent)",color:"#fff",padding:"2rem 1rem",marginTop:"12rem"},children:q.jsx("div",{style:{flexGrow:"1",margin:"0 auto",position:"relative",width:"auto"},children:q.jsxs("div",{style:{textAlign:"center"},children:[q.jsx("a",{href:Sp.link,children:q.jsx("img",{src:Sp.img,alt:"Logo",style:{maxWidth:"5em"}})}),q.jsx("div",{children:Sp.username})]})})})}UO.createRoot(document.getElementById("root")).render(q.jsx($.StrictMode,{children:q.jsx(q.Fragment,{children:q.jsxs(jv,{children:[q.jsxs(Y0,{style:{backgroundColor:"var(--accent)"},children:[q.jsx("a",{href:"./",children:"Home"}),q.jsx("a",{href:"debug",children:"Debug"}),q.jsx("a",{href:"blog",children:"Blog"})]}),q.jsxs(Av,{children:[q.jsx(bp,{exact:!0,path:"/",element:q.jsx(mA,{})}),q.jsx(bp,{path:"plasma",element:q.jsx(w0,{})})]}),q.jsx(q0,{})]})})}));
