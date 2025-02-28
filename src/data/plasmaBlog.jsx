@@ -119,7 +119,7 @@ void Game::Render()
 ~~~
 
 
-![](./projects/plasma/imgs/20211125.png)
+![](projects/plasma/imgs/20211125.png)
 
 The 600+ fps here isn't particularly great on the grounds
 that we're only rendering a single stationary sprite.
@@ -265,13 +265,13 @@ rendering component uses the tile types to determine
 which sprite to use for each tile, ensuring that the
 correct visual is applied.
 
-"projects/plasma/imgs/20211126.gif",
-"projects/plasma/imgs/20211127.png",
-"projects/plasma/imgs/20211128%20abc.png"
+![](projects/plasma/imgs/20211126.gif)
+![](projects/plasma/imgs/20211127.png)
+![](projects/plasma/imgs/20211128%20abc.png)
 
 ## Tiled, Rotations and Save data!
 
-![](./projects/plasma/imgs/20211202.png)
+![](projects/plasma/imgs/20211202.png)
 
 After some tilemap rework, I implemented pellets pickups
 and a simple score display. By around I had finished
@@ -292,19 +292,19 @@ highschool
 - Trying to make pacman transparent
 - Tab management
 
-![](./projects/plasma/imgs/20220227%20wind.png)
+![](projects/plasma/imgs/20220227%20wind.png)
 
 Notice how mouse events now go straight through the
 pacman window and interacts with Visual Studio behind
 it.
 
-![video](./projects/plasma/imgs/20220227%20click%20through.mp4)
+![video](projects/plasma/imgs/20220227%20click%20through.mp4)
 
 Getting the window to run fullscreen, the red here
 defines the windows bounds, so you can see it's working
 as intended~
 
-![](./projects/plasma/imgs/20220227%20fullscreen.png)
+![](projects/plasma/imgs/20220227%20fullscreen.png)
 
 # Later Inspiration!
 
@@ -319,7 +319,7 @@ rodent native to South America; And I had mentioned on
 occation that I would add them to a project...
 eventually.
 
-![](./projects/plasma/imgs/capybara.png)
+![](projects/plasma/imgs/capybara.png)
 
 ## Desktop Goose
 
@@ -343,7 +343,7 @@ Drew up a small pixelated sprite for the capybara, I
 went for this style to synergize with it's potentially
 untidy movement and current lack of animations.
 
-![](./projects/plasma/imgs/20220227%20the%20boi.png)
+![](projects/plasma/imgs/20220227%20the%20boi.png)
 
 I found it overly saturated here and later softed the
 fur colour to a more lighter blonde.
@@ -353,11 +353,11 @@ now, ready to be rendered on the screen~ Below, I had
 forgotten about setting a colour and scale, making our
 boy into a cute small silhouette.
 
-![](./projects/plasma/imgs/20220227%20small.png)
+![](projects/plasma/imgs/20220227%20small.png)
 
 ## AI
 
-![](./projects/plasma/imgs/20220303.gif)
+![](projects/plasma/imgs/20220303.gif)
 
 ## Hats & variety
 
@@ -367,14 +367,14 @@ kind of capybara would spawn: Slightly different size,
 fur colour, and most importantly a different hat. I
 designed a few hats.
 
-![](./projects/plasma/imgs/20220603%20hats.png)
+![](projects/plasma/imgs/20220603%20hats.png)
 
 
 # Release!
 
 March 5, 2022
 
-![](./projects/plasma/imgs/20220303%20itchiobanner.png)
+![](projects/plasma/imgs/20220303%20itchiobanner.png)
 
 ITCH@1426955?bg_color=222222&amp;fg_color=ffffff&amp;border_color=363636
 

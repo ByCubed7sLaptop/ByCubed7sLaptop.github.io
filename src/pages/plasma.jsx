@@ -3,32 +3,31 @@ import {useState, useEffect, useRef} from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import ProjectBox from "../../components/projectbox";
-import ImageCollectionRow from "../../components/imageCollectionRow";
-import Part from "../../components/part";
-import Article from "../../components/article";
-import Row from "../../components/row";
-import Subtitle from "../../components/subtitle";
-import Experience from "../../components/experience";
-import BackgroundImage from "../../components/backgroundImage";
-import Itchio from "../../components/itchio";
-import Youtube from "../../components/youtube";
+import ProjectBox from "../components/projectbox";
+import ImageCollectionRow from "../components/imageCollectionRow";
+import Part from "../components/part";
+import Article from "../components/article";
+import Row from "../components/row";
+import Subtitle from "../components/subtitle";
+import Experience from "../components/experience";
+import BackgroundImage from "../components/backgroundImage";
+import Itchio from "../components/itchio";
+import Youtube from "../components/youtube";
 
-import Caption from "../../components/blog/caption";
-import Code from "../../components/blog/code";
-import TitleCard from "../../components/blog/titleCard";
-import Contents from "../../components/blog/contents";
+import Caption from "../components/blog/caption";
+import Code from "../components/blog/code";
+import TitleCard from "../components/blog/titleCard";
+import Contents from "../components/blog/contents";
 
 import styles from "./blog.module.css";
 
-import {DesktopCapybara} from "../../data/projects";
-import markdown from "../../data/plasmaBlog";
+import {DesktopCapybara} from "../data/projects";
+import markdown from "../data/plasmaBlog";
 
 export default function Index() {
     return (
         <>
-            <BackgroundImage src="./projects/plasma/imgs/Capybara%20Wallpaper.png" />
-
+            <BackgroundImage src="../../projects/plasma/imgs/Capybara%20Wallpaper.png" />
             <Article>
                 <TitleCard
                     project={DesktopCapybara}
@@ -101,7 +100,7 @@ export default function Index() {
                             },
 
                             img(props) {
-                                const {node, ...rest} = props;
+                                const {node, src, ...rest} = props;
 
                                 if (props.alt == "video")
                                     return (
@@ -109,12 +108,19 @@ export default function Index() {
                                             muted
                                             autoPlay="autoplay"
                                             className={styles.img}
+                                            src={`../../${src}`}
                                             loop
                                             {...rest}
                                         />
                                     );
 
-                                return <img className={styles.img} {...rest} />;
+                                return (
+                                    <img
+                                        className={styles.img}
+                                        src={`../../${src}`}
+                                        {...rest}
+                                    />
+                                );
                             },
 
                             ul(props) {
