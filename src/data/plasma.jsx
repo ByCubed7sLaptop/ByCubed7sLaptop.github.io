@@ -1,4 +1,19 @@
-const blog = `
+import {Project} from "./data";
+
+var project = Project.Create({
+    startDate: new Date(2021, 9, 12),
+    endDate: new Date(2023, 2, 3),
+    displayName: "Plasma Engine",
+    projectName: "plasma",
+    description: "Game Engine Library & Desktop Capybara Simulator.",
+    tags: "C++, OpenGL, Programming",
+    imgPath: "projects/plasma/DesktopCapybara/SS%20Capybara%20wander2.gif",
+    backgroundPath: "default"
+});
+
+project.markdown = `
+![](${project.imgPath})
+
 # Summary
 
 ## What
@@ -431,9 +446,9 @@ it.
 
 ![video](projects/plasma/imgs/20220227%20click%20through.mp4)
 
+# Desktop Capybara
 
-
-# Later Inspiration!
+## Later Inspiration!
 
 ## Capybaras
 
@@ -458,8 +473,6 @@ YOUTUBE@EQx6fyrZDWM
 This, and the ongoing popularity of Capybaras, inspired
 me to make a Capybara desktop buddy!
 
-
-# Desktop Capybara
 
 ## Here comes the boi
 
@@ -599,17 +612,4 @@ project.
 
 `;
 
-import {Project} from "./data";
-var DesktopCapybara = Project.Create({
-    startDate: new Date(2021, 9, 12),
-    endDate: new Date(2023, 2, 3),
-    displayName: "Plasma Engine",
-    projectName: "plasma",
-    description: "Game Engine Library & Desktop Capybara Simulator.",
-    tags: "C++, OpenGL, Programming",
-    imgPath: "projects/plasma/DesktopCapybara/SS Capybara wander2.gif",
-    backgroundPath: "default",
-    markdown: blog
-});
-
-export default DesktopCapybara;
+export default project;

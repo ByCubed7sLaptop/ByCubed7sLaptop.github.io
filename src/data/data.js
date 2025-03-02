@@ -71,15 +71,15 @@ class Job extends TimeSpan {
 
 export class Project extends TimeSpan {
     constructor(
-        startDate,
-        endDate,
-        displayName,
-        projectName,
-        description,
-        tags,
+        startDate = null,
+        endDate = null,
+        displayName = "no displayName provided",
+        projectName = "no projectName provided",
+        description = "no description provided",
+        tags = "no tags provided",
         imgPath = "default",
         backgroundPath = "default",
-        markdown = ""
+        markdown = "insert markdown here"
     ) {
         super(startDate, endDate);
         this.displayName = displayName;
@@ -98,8 +98,6 @@ export class Project extends TimeSpan {
             this.backgroundPath = `projects/${projectName}/background.png`;
 
         this.markdown = markdown;
-        if (markdown == "default")
-            this.markdown = `data/${projectName}Blog.jsx`;
     }
 
     static Create({
