@@ -7,6 +7,7 @@ import Subtitle from "../components/subtitle";
 import Experience from "../components/experience";
 import BackgroundImage from "../components/backgroundImage";
 import Dots from "../components/dots";
+import Card from "../components/Card";
 
 import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
 
@@ -63,7 +64,7 @@ export default function Index() {
                             <Subtitle style={{color: "purple"}}>
                                 Hello!
                             </Subtitle>
-                            I'm Daniel Cooper. I'm an archetype developer &
+                            I'm Ethan Thomas. I'm an archetype developer &
                             software engineer with a passion for programming
                             innovation and collaboration. With a background in
                             computer science and game development, I have
@@ -71,21 +72,17 @@ export default function Index() {
                             tackle complex projects across various domains.
                             <br />
                             <br />
-                            Throughout my career, I have had the privilege of
-                            collaborating with a diverse array of technologies.
-                            My journey in software development has encompassed
-                            the creation of high-performance applications
-                            utilizing C++ and .NET Core, as well as the
-                            development of immersive gaming experiences with
-                            Unity and Godot.
+                            My journey has encompassed the creation of
+                            high-performance applications utilizing C++ and .NET
+                            Core, as well as the development of immersive gaming
+                            experiences with Unity and Godot.
                             <br />
                             <br />
                             I have consistently pursued the latest advancements
                             in the field, which has led me to explore web
-                            development frameworks such as React.js and Angular.
-                            Additionally, I have ventured into machine learning
-                            with frameworks like TensorFlow and PyTorch, further
-                            broadening my expertise.
+                            development frameworks such as React.js and Angular
+                            as well as machine learning with frameworks like
+                            TensorFlow and PyTorch.
                         </div>
                         <div style={{padding: "1em", paddingTop: "3em"}}>
                             My experience also extends to cloud computing, where
@@ -169,6 +166,72 @@ export default function Index() {
                             "games/Noita.png"
                         ]}
                     />
+                </Part>
+
+                <Part
+                    style={{backgroundColor: "var(--accent)"}}
+                    contentStyle={{maxWidth: "1150px", margin: "auto"}}
+                >
+                    <Subtitle>Digital Art & TTRPG</Subtitle>
+                    I love digital art. It's my second favourite medium to
+                    exress myself.
+                    <br />
+                    ...
+                    <br />
+                    I offered to draw a few cards for a freind who was running a
+                    new tabletop roleplaying game. This quickly spiraled out of
+                    control and I havent been able to stop doing cards since.
+                    <br />
+                    <br />
+                    Here are a few of my favourites:
+                    <div
+                        style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            filter: "blur(0.8px)"
+                        }}
+                    >
+                        <Card
+                            src="cards/Rina the Wanted Vagabond.png"
+                            back="cards/Demon Lord.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/Altar of the Mad God.png"
+                            back="cards/Delusion.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/Destroy Example.png"
+                            back="cards/FinallyAWorthyChallenge.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/HeartscaleShowstopper.png"
+                            back="cards/HighTide.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/NowItsMyTurn.png"
+                            back="cards/RedStripedLionfish.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/SmolCreature.png"
+                            back="cards/Whirling of The Engine.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/SnakeTwist Motor p1.png"
+                            back="cards/SnakeTwist Motor p2.png"
+                            style={{width: "22%"}}
+                        />
+                        <Card
+                            src="cards/ZacharyZipper.png"
+                            back="Court%20Jester.png"
+                            style={{width: "22%"}}
+                        />
+                    </div>
                 </Part>
 
                 <Part
