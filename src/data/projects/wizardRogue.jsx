@@ -1,25 +1,31 @@
-import {Project} from "./data";
+import {Project} from "../data";
 var project = Project.Create({
     startDate: new Date(2023, 1, 13),
     endDate: new Date(),
     displayName: "Wizard Rogue",
     projectName: "wizardrogue",
     description: "A 2D action roguelite focusing on code modulization.",
-    tags: "Unity, Godot 3, Tiled, C#",
+    tags: "Unity, Godot 3, Tiled, C#, Terrain Generation",
     imgPath: "default",
     backgroundPath: "default"
 });
 
-project.markdown = `
-##### Writing in progress
+/**
+Writing in progress
 -
-##### TODO:
-##### Convert old site into markdown
-##### Add images / videos / code snippets
-##### Add dates
-##### Break down into smaller sections
-##### Finish conclusion
+TODO:
+Convert old site into markdown
+Add images / videos / code snippets
+Add dates
+Break down into smaller sections
+Finish conclusion
 
+Add images
+
+Find Unreal builds and development from 6? years ago
+**/
+
+project.blog = `
 ![](${project.imgPath})
 
 # Summary
@@ -48,7 +54,6 @@ And now, it is to create a procedually generated prototype for creating huge
 tile-based worlds.
 
 
-##### Find Unreal builds and development from 6? years ago
 
 # Breaking down the structure
 ??

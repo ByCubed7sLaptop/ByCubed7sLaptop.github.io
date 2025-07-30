@@ -4,10 +4,12 @@ import {createRoot} from "react-dom/client";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Home from "./pages/home";
+import Projects from "./pages/projects";
 
 import Banner from "./components/banner";
 import Footer from "./components/footer";
-import Blog from "./components/blog/blog";
+import Blog from "./components/blog";
+import Showcase from "./components/showcase";
 
 import "./index.css";
 
@@ -23,10 +25,18 @@ createRoot(document.getElementById("root")).render(
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
+                    <Route exact path="/projects" element={<Projects />} />
                     {projects.map(project => (
                         <Route
                             key={project.projectName}
-                            path={project.projectName}
+                            path={project.showcasePath}
+                            element={<Showcase project={project} />}
+                        />
+                    ))}
+                    {projects.map(project => (
+                        <Route
+                            key={project.projectName + "blog"}
+                            path={project.blogPath}
                             element={<Blog project={project} />}
                         />
                     ))}

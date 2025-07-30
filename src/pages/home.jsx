@@ -37,10 +37,11 @@ export default function Index() {
                                 textAlign: "right"
                             }}
                         >
-                            <span style={{color: "purple"}}>
-                                Archetype Developer
+                            <span style={{}}>Ethan Thomas</span>
+                            <br />
+                            <span style={{color: "purple", fontSize: "0.8em"}}>
+                                Software Developer
                             </span>
-                            <br /> & Aspiring Software Magician
                         </h1>
                     </div>
 
@@ -64,30 +65,30 @@ export default function Index() {
                             <Subtitle style={{color: "purple"}}>
                                 Hello!
                             </Subtitle>
-                            I'm Ethan Thomas. I'm an archetype developer &
-                            software engineer with a passion for programming
-                            innovation and collaboration. With a background in
-                            computer science and game development, I have
-                            developed a diverse set of skills that enable me to
-                            tackle complex projects across various domains.
+                            I'm Ethan Thomas, an archetype developer & software
+                            engineer with a passion for programming innovation
+                            and collaboration. With a background in computer
+                            science and game development, I have developed a
+                            diverse set of skills that enable me to tackle
+                            complex projects across various domains.
                             <br />
                             <br />
                             My journey has encompassed the creation of
                             high-performance applications utilizing C++ and .NET
-                            Core, as well as the development of immersive gaming
-                            experiences with Unity and Godot.
+                            Core, as well as the development of games using
+                            Unity and Godot.
                             <br />
                             <br />
                             I have consistently pursued the latest advancements
-                            in the field, which has led me to explore web
+                            in my field, which has led me to explore web
                             development frameworks such as React.js and Angular
-                            as well as machine learning with frameworks like
+                            as well as machine learning frameworks like
                             TensorFlow and PyTorch.
                         </div>
                         <div style={{padding: "1em", paddingTop: "3em"}}>
-                            My experience also extends to cloud computing, where
-                            I have effectively utilized platforms like AWS and
-                            Azure to design scalable and secure applications
+                            My experience also extends to cloud development,
+                            where I have effectively utilized platforms like AWS
+                            and Azure to design scalable and secure applications
                             capable of accommodating high traffic volumes. I
                             have also engaged with innovative projects in the
                             realm of VR using OpenVR, demonstrating my
@@ -240,12 +241,7 @@ export default function Index() {
                 >
                     <Subtitle>More stuff!</Subtitle>
 
-                    <div>Digital Art Hobby Here</div>
-                    <div>TTRPG stuff</div>
-                    <div>Volenteering stuff?</div>
-                    <div>Music stuff?</div>
-                    <div>Dog pics?</div>
-                    <div>Pom</div>
+                    <div>DofE?</div>
                 </Part>
             </Article>
         </>

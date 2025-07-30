@@ -1,5 +1,5 @@
 import Title from "./title";
-import Part from "../part";
+import Part from "./part";
 
 export default function TitleCard({children, style, project, dateClassName}) {
     return (

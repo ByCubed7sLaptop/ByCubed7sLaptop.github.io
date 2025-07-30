@@ -1,4 +1,4 @@
-import {Project} from "./data";
+import {Project} from "../data";
 
 var project = Project.Create({
     startDate: new Date(2021, 9, 12),
@@ -11,7 +11,7 @@ var project = Project.Create({
     backgroundPath: "default"
 });
 
-project.markdown = `
+project.blog = `
 ![](${project.imgPath})
 
 # Summary

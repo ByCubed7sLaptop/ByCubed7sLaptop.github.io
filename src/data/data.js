@@ -1,3 +1,5 @@
+import {Home as HomePath} from "./nav";
+
 function getTimeAbbreviation(date) {
     var d = date.getDate();
     var m = date.getMonth();
@@ -79,7 +81,8 @@ export class Project extends TimeSpan {
         tags = "no tags provided",
         imgPath = "default",
         backgroundPath = "default",
-        markdown = "insert markdown here"
+        blog = "insert blog here",
+        showcase = "insert showcase here"
     ) {
         super(startDate, endDate);
         this.displayName = displayName;
@@ -97,7 +100,13 @@ export class Project extends TimeSpan {
         if (backgroundPath == "default")
             this.backgroundPath = `projects/${projectName}/background.png`;
 
-        this.markdown = markdown;
+        this.blog = blog;
+        this.showcase = showcase;
+
+        this.path = "projects/" + this.projectName;
+
+        this.showcasePath = "projects/" + this.projectName;
+        this.blogPath = "blogs/" + this.projectName;
     }
 
     static Create({
@@ -109,7 +118,8 @@ export class Project extends TimeSpan {
         tags = "no tags provided",
         imgPath = "default",
         backgroundPath = "default",
-        markdown = "insert markdown here"
+        blog = "insert blog here",
+        showcase = "insert showcase here"
     } = {}) {
         return new Project(
             startDate,
@@ -120,8 +130,21 @@ export class Project extends TimeSpan {
             tags,
             imgPath,
             backgroundPath,
-            markdown
+            blog,
+            showcase
         );
+    }
+
+    getFullImgPath() {
+        return HomePath + this.imgPath;
+    }
+
+    getFullShowcasePath() {
+        return HomePath + "projects/" + this.projectName;
+    }
+
+    getFullBlogPath() {
+        return HomePath + "blogs/" + this.projectName;
     }
 
     toString() {

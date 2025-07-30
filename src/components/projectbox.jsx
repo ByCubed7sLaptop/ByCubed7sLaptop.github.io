@@ -1,10 +1,6 @@
 import {useState} from "react";
 
 export default function ProjectBox({
-    displayName,
-    name,
-    description,
-    tags,
     fromProject,
     style,
     insideStyle,
@@ -12,17 +8,13 @@ export default function ProjectBox({
 }) {
     const [isHovered, setIsHovered] = useState(false);
 
-    if (fromProject != undefined) {
-        displayName = fromProject.displayName;
-        name = fromProject.projectName;
-        description = fromProject.description;
-        tags = fromProject.tags;
-        var path = fromProject.imgPath;
-    } else {
-        var path = "";
-        if (imgPath == "tile") path = `projects/${name}/tile.gif`;
-        else if (imgPath == "card") path = `projects/${name}/card.png`;
-    }
+    if (fromProject === undefined) return <></>;
+
+    var displayName = fromProject.displayName;
+    var name = fromProject.projectName;
+    var description = fromProject.description;
+    var tags = fromProject.tags;
+    var path = fromProject.imgPath;
 
     const styleC = {
         display: "flex",
@@ -81,7 +73,7 @@ export default function ProjectBox({
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <a href={"./" + name}>
+                <a href={fromProject.getFullShowcasePath()}>
                     <div style={flippedStyle}>
                         <div style={backgroundImageStyle} />
                         <div style={textStyle}>
