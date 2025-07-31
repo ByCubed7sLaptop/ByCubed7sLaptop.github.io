@@ -1,0 +1,15 @@
+/* latin */
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/lexend/v25/wlpwgwvFAVdoq2_v-6QU.woff2") format("woff2");
+}
+
+div {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}

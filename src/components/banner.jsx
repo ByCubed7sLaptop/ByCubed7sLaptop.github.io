@@ -1,6 +1,6 @@
 import styles from "./banner.module.css";
 
-export default function Banner({style, children}) {
+export default function Banner({name, style, children}) {
     return (
         <header role="banner" className={styles.nav} style={style}>
             <input type="checkbox" className={styles.navCheck} id="navCheck" />
@@ -13,7 +13,7 @@ export default function Banner({style, children}) {
                 </label>
             </div>
             <div className={styles.navLinks}>{children}</div>
-            <h1 className={styles.brand}>ETHAN THOMAS</h1>
+            <h1 className={styles.brand}>{name}</h1>
         </header>
     );
 }

@@ -9,6 +9,8 @@ import BackgroundImage from "../components/backgroundImage";
 import Dots from "../components/dots";
 import Card from "../components/Card";
 
+import {Me} from "../data/socials";
+
 import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
 
 export default function Index() {
@@ -37,7 +39,7 @@ export default function Index() {
                                 textAlign: "right"
                             }}
                         >
-                            <span style={{}}>Ethan Thomas</span>
+                            <span style={{}}>{Me.name}</span>
                             <br />
                             <span style={{color: "purple", fontSize: "0.8em"}}>
                                 Software Developer
