@@ -236,15 +236,6 @@ export default function Index() {
                         />
                     </div>
                 </Part>
-
-                <Part
-                    style={{backgroundColor: "var(--accent)"}}
-                    contentStyle={{maxWidth: "1150px", margin: "auto"}}
-                >
-                    <Subtitle>More stuff!</Subtitle>
-
-                    <div>DofE?</div>
-                </Part>
             </Article>
         </>
     );
