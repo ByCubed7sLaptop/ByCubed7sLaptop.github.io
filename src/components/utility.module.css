@@ -8,4 +8,9 @@
 
 .invisible {
     opacity: 0;
+    width: 1px;
+    height: 1px;
+    max-width: 1px;
+    max-height: 1px;
+    overflow: hidden;
 }

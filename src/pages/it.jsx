@@ -8,13 +8,14 @@ import Experience from "../components/experience";
 import BackgroundImage from "../components/backgroundImage";
 import Dots from "../components/dots";
 import Card from "../components/Card";
+import Aes from "../components/aes";
+import ResponsiveGrid from "../components/responsiveGrid";
 
 import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
 import {Me, Cv, Experiences, Certifications} from "../data/socials";
 
-import Aes from "../components/aes";
-
 import "./it.css";
+import utilityStyles from "../components/utility.module.css";
 
 export default function Index() {
     var entry = Cv.stock;
@@ -29,15 +30,22 @@ export default function Index() {
         <>
             <Article>
                 <Part>
-                    <div
+                    <ResponsiveGrid
+                        gridTemplateAreas={`
+                "header header"
+                "summary skills"
+                "job0 job0"
+                "job1 job1"
+                "cert cert"`}
+                        gridTemplateAreasMobile={`
+            "header header"
+            "summary summary"
+            "skills skills"
+            "job0 job0"
+            "job1 job1"
+            "cert cert"`}
                         style={{
                             display: "grid",
-                            gridTemplateAreas: `
-                    "header header"
-                    "summary skills"
-                    "job0 job0"
-                    "job1 job1"
-                    "cert cert"`,
                             gridTemplateColumns: "1fr 1fr",
                             gap: "50px",
                             backgroundColor: "var(--accent)",
@@ -45,11 +53,11 @@ export default function Index() {
                             rowGap: "0"
                         }}
                     >
-                        <div style={{lineHeight: "0"}}>
+                        <div style={{lineHeight: "1"}}>
                             <h3 style={{gridArea: "summary"}}>{Me.title}</h3>
                         </div>
 
-                        <div id="d">
+                        <div>
                             email me @{" "}
                             <strong>
                                 <Aes
@@ -72,18 +80,10 @@ export default function Index() {
                             {entry.skills.map(function(skill, i) {
                                 return <div>> {skill}</div>;
                             })}
+                            <br />
                         </div>
 
-                        <div
-                            className="invisable"
-                            style={{
-                                width: "1px",
-                                height: "1px",
-                                maxWidth: "1px",
-                                maxHeight: "1px",
-                                overflow: "hidden"
-                            }}
-                        >
+                        <div className={utilityStyles.invisible}>
                             <br />
                             This document provides invaluable guidance for
                             crafting a professional and impactful curriculum
@@ -137,7 +137,7 @@ export default function Index() {
                                 );
                             })}
                         </div>
-                    </div>
+                    </ResponsiveGrid>
                     <small>
                         Feel free to ping me an email if you're interested in
                         learning about my other works!
