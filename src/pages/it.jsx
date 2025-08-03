@@ -46,9 +46,6 @@ export default function Index() {
                         }}
                     >
                         <div style={{lineHeight: "0"}}>
-                            {
-                                //<!-- <h2>{Me.name}</h2> -->
-                            }
                             <h3 style={{gridArea: "summary"}}>{Me.title}</h3>
                         </div>
 
@@ -67,6 +64,7 @@ export default function Index() {
                         <div style={{gridArea: "summary"}}>
                             <h4>Summary</h4>
                             <div>{entry.summary}</div>
+                            <br />
                         </div>
 
                         <div style={{gridArea: "skills"}}>
@@ -140,6 +138,7 @@ export default function Index() {
                             })}
                         </div>
                     </div>
+                    <small>sfgijsdroghjdoghodrug</small>
                 </Part>
             </Article>
         </>

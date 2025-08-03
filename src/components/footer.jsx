@@ -1,15 +1,11 @@
 import {Github} from "../data/socials";
 
+import styles from "./footer.module.css";
+import utilityStyles from "./utility.module.css";
+
 export default function Footer({style, children}) {
     return (
-        <div
-            style={{
-                backgroundColor: "var(--accent)",
-                color: "#fff",
-                padding: "2rem 1rem",
-                marginTop: "12rem"
-            }}
-        >
+        <div className={[styles.footer, utilityStyles.unselectable].join(" ")}>
             <div
                 style={{
                     flexGrow: "1",

@@ -1,0 +1,6 @@
+.footer {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 2rem 1rem;
+    margin-top: 12rem;
+}
