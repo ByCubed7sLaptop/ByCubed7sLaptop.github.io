@@ -138,7 +138,10 @@ export default function Index() {
                             })}
                         </div>
                     </div>
-                    <small>sfgijsdroghjdoghodrug</small>
+                    <small>
+                        Feel free to ping me an email if you're interested in
+                        learning about my other works!
+                    </small>
                 </Part>
             </Article>
         </>
