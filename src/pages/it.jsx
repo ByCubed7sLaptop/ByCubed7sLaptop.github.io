@@ -7,7 +7,6 @@ import Subtitle from "../components/subtitle";
 import Experience from "../components/experience";
 import BackgroundImage from "../components/backgroundImage";
 import Dots from "../components/dots";
-import Card from "../components/Card";
 import Aes from "../components/aes";
 import ResponsiveGrid from "../components/responsiveGrid";
 
@@ -71,7 +70,7 @@ export default function Index() {
                         <div style={{gridArea: "skills"}}>
                             <h4>Skills</h4>
                             {entry.skills.map(function(skill, i) {
-                                return <div>> {skill}</div>;
+                                return <div>&gt; {skill}</div>;
                             })}
                             <br />
                         </div>
@@ -117,7 +116,7 @@ export default function Index() {
                             {Certifications.map(function(cert, i) {
                                 return (
                                     <div style={{fontSize: "1.1em"}}>
-                                        >{" "}
+                                        &gt;{" "}
                                         <strong>
                                             {cert.title}, {cert.level}
                                         </strong>{" "}
