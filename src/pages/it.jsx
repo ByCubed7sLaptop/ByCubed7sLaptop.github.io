@@ -1,4 +1,3 @@
-import ProjectBox from "../components/projectbox";
 import ImageCollectionRow from "../components/imageCollectionRow";
 import Part from "../components/part";
 import Article from "../components/article";
