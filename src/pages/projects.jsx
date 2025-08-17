@@ -1,7 +1,7 @@
 import Article from "../components/article";
 import BackgroundImage from "../components/backgroundImage";
 import Part from "../components/part";
-import ProjectBox from "../components/ProjectBox";
+import ProjectBox from "../components/projectBox";
 
 import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
 
