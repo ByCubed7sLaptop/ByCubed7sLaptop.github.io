@@ -1,17 +1,17 @@
-import ProjectBox from "../components/projectBox";
-import ImageCollectionRow from "../components/imageCollectionRow";
-import Part from "../components/part";
-import Article from "../components/article";
-import Row from "../components/row";
-import Subtitle from "../components/subtitle";
-import Experience from "../components/experience";
-import BackgroundImage from "../components/backgroundImage";
-import Dots from "../components/dots";
-import Card from "../components/Card";
+import ProjectBox from "../components/projectBox.jsx";
+import ImageCollectionRow from "../components/imageCollectionRow.jsx";
+import Part from "../components/part.jsx";
+import Article from "../components/article.jsx";
+import Row from "../components/row.jsx";
+import Subtitle from "../components/subtitle.jsx";
+import Experience from "../components/experience.jsx";
+import BackgroundImage from "../components/backgroundImage.jsx";
+import Dots from "../components/dots.jsx";
+import Card from "../components/card.jsx";
 
-import {Me} from "../data/socials";
+import {Me} from "../data/socials.js";
 
-import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
+import {DesktopCapybara, Infected, WizardRogue} from "../data/projects.js";
 
 export default function Index() {
     return (

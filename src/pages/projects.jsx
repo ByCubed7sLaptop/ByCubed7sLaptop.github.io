@@ -1,9 +1,9 @@
-import Article from "../components/article";
-import BackgroundImage from "../components/backgroundImage";
-import Part from "../components/part";
-import ProjectBox from "../components/projectBox";
+import Article from "../components/article.jsx";
+import BackgroundImage from "../components/backgroundImage.jsx";
+import Part from "../components/part.jsx";
+import ProjectBox from "../components/projectBox.jsx";
 
-import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
+import {DesktopCapybara, Infected, WizardRogue} from "../data/projects.js";
 
 export default function Index() {
     return (
