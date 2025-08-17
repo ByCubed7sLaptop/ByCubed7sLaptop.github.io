@@ -13,3 +13,13 @@ div {
     font-weight: 350;
     font-style: normal;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-color: var(--accent);
+    padding: 40px;
+    row-gap: 0;
+    border-radius: 50px;
+}

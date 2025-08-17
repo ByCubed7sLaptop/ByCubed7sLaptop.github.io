@@ -14,9 +14,9 @@ export const Cv = {
         summary:
             "A highly organized and detail-oriented professional seeking an administrator position within a dynamic environment. Possessing strong IT skills, experience with all sorts of logistic systems, and a proven ability to ensure accuracy and support operational efficiency. Dedicated to smooth-running functionality and building effective relationships across teams.",
         skills: [
-            "Critical thinking & problem-solving",
-            "Analytic and attentive to detail",
-            "Passionate & continuously learning",
+            "Critical thinking & problem-solving.",
+            "Analytic and attentive to detail.",
+            "Passionate & continuously learning.",
             "Experience in a large range of software skills: Microsoft applications; Graphics editors such as Aseprite, SketchBook Pro & Photoshop.",
             "Developing my own tools to increase efficiency in a large area of operations."
         ]

@@ -32,32 +32,25 @@ export default function Index() {
                 <Part>
                     <ResponsiveGrid
                         gridTemplateAreas={`
-                "header header"
+                "header contact"
                 "summary skills"
                 "job0 job0"
                 "job1 job1"
                 "cert cert"`}
                         gridTemplateAreasMobile={`
-            "header header"
-            "summary summary"
-            "skills skills"
-            "job0 job0"
-            "job1 job1"
-            "cert cert"`}
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: "1fr 1fr",
-                            gap: "50px",
-                            backgroundColor: "var(--accent)",
-                            padding: "40px",
-                            rowGap: "0"
-                        }}
+                "header contact"
+                "summary summary"
+                "skills skills"
+                "job0 job0"
+                "job1 job1"
+                "cert cert"`}
+                        className="grid"
                     >
-                        <div style={{lineHeight: "1"}}>
-                            <h3 style={{gridArea: "summary"}}>{Me.title}</h3>
+                        <div style={{gridArea: "header", lineHeight: "1"}}>
+                            <h3>{Me.title}</h3>
                         </div>
 
-                        <div>
+                        <div style={{gridArea: "contact"}}>
                             email me @{" "}
                             <strong>
                                 <Aes
