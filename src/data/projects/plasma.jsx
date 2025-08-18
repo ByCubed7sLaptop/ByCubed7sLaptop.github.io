@@ -12,8 +12,6 @@ var project = Project.Create({
 });
 
 project.blog = `
-![](${project.imgPath})
-
 # Summary
 
 ## What

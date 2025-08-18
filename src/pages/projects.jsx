@@ -3,7 +3,7 @@ import BackgroundImage from "../components/backgroundImage.jsx";
 import Part from "../components/part.jsx";
 import ProjectBox from "../components/projectBox.jsx";
 
-import {DesktopCapybara, Infected, WizardRogue} from "../data/projects.js";
+import {projects} from "../data/projects.js";
 
 export default function Index() {
     return (
@@ -19,17 +19,14 @@ export default function Index() {
                         justifyContent: "space-evenly"
                     }}
                 >
-                    <ProjectBox
-                        fromProject={DesktopCapybara}
-                        style={{width: "21%"}}
-                    />
-
-                    <ProjectBox
-                        fromProject={WizardRogue}
-                        style={{width: "21%"}}
-                    />
-
-                    <ProjectBox fromProject={Infected} style={{width: "21%"}} />
+                    {projects.map(function(project, i) {
+                        return (
+                            <ProjectBox
+                                fromProject={project}
+                                style={{width: "21%"}}
+                            />
+                        );
+                    })}
                 </div>
             </Article>
         </>

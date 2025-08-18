@@ -26,7 +26,6 @@ Find Unreal builds and development from 6? years ago
 **/
 
 project.blog = `
-![](${project.imgPath})
 
 # Summary
 

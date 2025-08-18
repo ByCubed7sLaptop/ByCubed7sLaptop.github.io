@@ -9,4 +9,16 @@ export const WizardRogue = _WizardRogue;
 import _Infected from "./projects/infected";
 export const Infected = _Infected;
 
-export var projects = [DesktopCapybara, WizardRogue, Infected];
+import _Mario from "./projects/mario";
+export const Mario = _Mario;
+
+import _PaperRogue from "./projects/paperRogue";
+export const PaperRogue = _PaperRogue;
+
+export var projects = [
+    DesktopCapybara,
+    WizardRogue,
+    Infected
+    //Mario,
+    //PaperRogue
+];

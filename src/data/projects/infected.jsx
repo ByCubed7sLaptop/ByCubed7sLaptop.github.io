@@ -10,7 +10,6 @@ var project = Project.Create({
 });
 
 project.blog = `
-![video](projects/${project.projectName}/VR_Gun.mp4)
 
 # Summary
 
@@ -21,6 +20,8 @@ Infected is an immersive open-world survival game set in a post-apocalyptic worl
 ## Goals
 
 The primary goal is to create an engaging and immersive experience that challenges players to survive in a hostile world where resources are scarce and danger lurks around every corner. To achieve this, we aim to develop a robust game mechanic system that incorporates crafting, resource management, and combat, all while utilizing procedural generation to create a vast open world filled with diverse landscapes and weather patterns.
+
+![video](projects/${project.projectName}/VR_Gun.mp4)
 
 # Starting out
 Oct 12

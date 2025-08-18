@@ -82,7 +82,7 @@ export class Project extends TimeSpan {
         imgPath = "default",
         backgroundPath = "default",
         blog = "insert blog here",
-        showcase = "insert showcase here"
+        showcase = ""
     ) {
         super(startDate, endDate);
         this.displayName = displayName;
@@ -119,7 +119,7 @@ export class Project extends TimeSpan {
         imgPath = "default",
         backgroundPath = "default",
         blog = "insert blog here",
-        showcase = "insert showcase here"
+        showcase = ""
     } = {}) {
         return new Project(
             startDate,

@@ -11,6 +11,14 @@ export default function Blog({project}) {
             <BackgroundImage src={`../../${project.backgroundPath}`} />
             <Article>
                 <Part contentClassName={styles.part}>
+                    <img
+                        src={`../../${project.imgPath}`}
+                        style={{
+                            margin: "1em auto",
+                            display: "block",
+                            maxwidth: "100%"
+                        }}
+                    />
                     <MDDisplay text={project.blog} />
                 </Part>
             </Article>

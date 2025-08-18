@@ -5,7 +5,11 @@ import MDDisplay from "./mdDisplay";
 
 import styles from "./showcase.module.css";
 
+import {useNavigate} from "react-router-dom";
+
 export default function Showcase({project}) {
+    if (project.showcase == "") window.location = project.getFullBlogPath();
+
     return (
         <>
             <BackgroundImage src={`../../${project.backgroundPath}`} />
