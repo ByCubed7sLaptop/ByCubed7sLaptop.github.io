@@ -95,7 +95,6 @@
 }
 
 .brand {
-    margin-top: 11px;
     font-size: 42px;
     font-style: normal;
     font-weight: 700;
@@ -104,5 +103,7 @@
     display: block;
     float: left;
     line-height: 0.8;
+    margin-top: 11px;
     margin-left: 60px;
+    margin-bottom: 0;
 }

@@ -57,7 +57,7 @@ export default function Index() {
                             <span style={{}}>{Me.name}</span>
                             <br />
                             <span style={{color: "purple", fontSize: "0.8em"}}>
-                                Software Developer
+                                {Me.title}
                             </span>
                         </h1>
                     </div>
@@ -82,7 +82,7 @@ export default function Index() {
                             <Subtitle style={{color: "purple"}}>
                                 Hello!
                             </Subtitle>
-                            I'm Ethan Thomas, an archetype developer & software
+                            I'm {Me.name}, an archetype developer & software
                             engineer with a passion for programming innovation
                             and collaboration. With a background in computer
                             science and game development, I have developed a

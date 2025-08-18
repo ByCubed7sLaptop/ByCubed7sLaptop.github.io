@@ -10,19 +10,28 @@ export default function Index() {
         <>
             <BackgroundImage src="pom/pom.png" />
 
-            <div
-                style={{
-                    display: "flex",
-                    flex: "0 1 auto",
-                    flexDirection: "row",
-                    flexWrap: "wrap"
-                }}
-            >
-                <ProjectBox
-                    fromProject={DesktopCapybara}
-                    style={{width: "32%"}}
-                />
-            </div>
+            <Article>
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        flexWrap: "wrap",
+                        justifyContent: "center"
+                    }}
+                >
+                    <ProjectBox
+                        fromProject={DesktopCapybara}
+                        style={{width: "20%"}}
+                    />
+
+                    <ProjectBox
+                        fromProject={WizardRogue}
+                        style={{width: "20%"}}
+                    />
+
+                    <ProjectBox fromProject={Infected} style={{width: "20%"}} />
+                </div>
+            </Article>
         </>
     );
 }
