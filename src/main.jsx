@@ -17,6 +17,7 @@ import "./index.css";
 
 import {projects} from "./data/projects";
 import {Me} from "./data/socials";
+import {Home as HomePath} from "./data/nav";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -26,7 +27,7 @@ createRoot(document.getElementById("root")).render(
                     style={{backgroundColor: "var(--accent)"}}
                     name={Me.name}
                 >
-                    <a href="./">Home</a>
+                    <a href={HomePath}>Home</a>
                 </Banner>
 
                 <Routes>

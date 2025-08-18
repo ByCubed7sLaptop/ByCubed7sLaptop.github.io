@@ -553,7 +553,7 @@ designed a few hats.
 Now each time you open the application, or spawn a new Capybara with different hats,
 sizes, and fur colors.
 
-![](projects/plasma/DesktopCapybara/20220603%20hats.png)
+
 
 
 ## Optimizations
@@ -625,6 +625,8 @@ build a modular Entity Component System game engine with a strong emphasis
 on usability and ease of development. The final deliverable was a playable game
 featuring Pac-Man and later on used for a fully functional Capybara companion application.
 
+
+
 ### Key Achievements & Technologies:
 
 - **Modular ECS Engine**: Developed a robust ECS architecture, demonstrating proficiency in designing scalable systems for game development.
@@ -632,6 +634,7 @@ featuring Pac-Man and later on used for a fully functional Capybara companion ap
 - **C++ Mastery**: Solidified my C++ skills through hands-on experience with memory management, object-oriented design, and shader programming.
 - **Game Development Fundamentals**: Gained practical experience in game loop implementation, input handling, rendering pipelines, and collision detection.
 - **Capybara Companion**: Created a fully functional desktop application featuring a customizable Capybara companion with AI behavior, animations, hats, and interactive elements – showcasing creativity and advanced programming skills.
+
 
 # Project Stages & Highlights:
 ### Initial Setup
@@ -654,6 +657,8 @@ I integrated the Tiled map editor for seamless map creation and import into the
 game. A state machine was implemented for the Capybara's AI behavior,
 enabling easy state transitions and interactions. I also optimized
 performance through entity pooling and component caching.
+
+![](projects/plasma/DesktopCapybara/20220603%20hats.png)
 
 ### Capybara
 I developed a fully functional desktop application featuring a customizable
