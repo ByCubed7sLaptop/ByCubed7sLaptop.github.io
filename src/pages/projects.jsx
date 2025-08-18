@@ -16,20 +16,20 @@ export default function Index() {
                         display: "flex",
                         flexDirection: "row",
                         flexWrap: "wrap",
-                        justifyContent: "center"
+                        justifyContent: "space-evenly"
                     }}
                 >
                     <ProjectBox
                         fromProject={DesktopCapybara}
-                        style={{width: "20%"}}
+                        style={{width: "21%"}}
                     />
 
                     <ProjectBox
                         fromProject={WizardRogue}
-                        style={{width: "20%"}}
+                        style={{width: "21%"}}
                     />
 
-                    <ProjectBox fromProject={Infected} style={{width: "20%"}} />
+                    <ProjectBox fromProject={Infected} style={{width: "21%"}} />
                 </div>
             </Article>
         </>
