@@ -664,8 +664,6 @@ the environment, and random visual deviations (different hats, sprites, etc).
 ![](projects/plasma/DesktopCapybara/20220303%20itchiobanner.png)
 
 ITCH@1426955?bg_color=222222&amp;fg_color=ffffff&amp;border_color=363636
-
-You can see the full blog [here: LINK](${project.getFullBlogPath()})
 `;
 
 export default project;

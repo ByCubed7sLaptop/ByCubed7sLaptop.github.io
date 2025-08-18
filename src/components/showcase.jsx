@@ -13,6 +13,23 @@ export default function Showcase({project}) {
                 <Part contentClassName={styles.part}>
                     <MDDisplay text={project.showcase} />
                 </Part>
+                <Part
+                    contentClassName={styles.part}
+                    style={{
+                        textAlign: "center"
+                    }}
+                >
+                    <a href={project.getFullBlogPath()}>
+                        You can see the full blog here
+                        <br />
+                        <img
+                            src="../more.png"
+                            style={{
+                                width: "10%"
+                            }}
+                        />
+                    </a>
+                </Part>
             </Article>
         </>
     );
