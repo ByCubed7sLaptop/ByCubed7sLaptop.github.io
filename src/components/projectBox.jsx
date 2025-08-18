@@ -1,11 +1,6 @@
 import {useState} from "react";
 
-export default function ProjectBox({
-    fromProject,
-    style,
-    insideStyle,
-    imgPath = "tile"
-}) {
+export default function ProjectBox({fromProject, style, insideStyle}) {
     const [isHovered, setIsHovered] = useState(false);
 
     if (fromProject === undefined) return <></>;

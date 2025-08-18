@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/home";
 import Projects from "./pages/projects";
 import It from "./pages/it";
+import Cards from "./pages/cards";
 
 import Banner from "./components/banner";
 import Footer from "./components/footer";
@@ -32,6 +33,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/it" element={<It />} />
                     <Route exact path="/projects" element={<Projects />} />
+                    <Route exact path="/cards" element={<Cards />} />
                     {projects.map(project => (
                         <Route
                             key={project.projectName}
