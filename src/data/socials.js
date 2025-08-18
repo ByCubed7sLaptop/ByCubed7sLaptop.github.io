@@ -5,7 +5,8 @@ export const Github = {
 };
 
 export const Me = {
-    name: "ByCubed7",
+    name: import.meta.env.VITE_NAME,
+    //"ByCubed7",
     title: "System Architect"
 };
 
