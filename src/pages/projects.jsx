@@ -30,6 +30,7 @@ export default function Index() {
                     })}
                 </div>
             </Article>
+            <div style={{minHeight: "11.5vh"}}/>
         </>
     );
 }
