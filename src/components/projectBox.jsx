@@ -63,12 +63,12 @@ export default function ProjectBox({fromProject, style, insideStyle}) {
 
     return (
         <div style={styleC}>
-            <div
-                style={insideStyleC}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <a href={fromProject.getFullShowcasePath()}>
+            <a href={fromProject.getFullShowcasePath()}>
+                <div
+                    style={insideStyleC}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
                     <div style={flippedStyle}>
                         <div style={backgroundImageStyle} />
                         <div style={textStyle}>
@@ -81,8 +81,8 @@ export default function ProjectBox({fromProject, style, insideStyle}) {
                             </div>
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     );
 }

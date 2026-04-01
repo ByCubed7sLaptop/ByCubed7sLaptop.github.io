@@ -1,0 +1,123 @@
+body {
+  background: #15181d;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: normal;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+small {
+  filter: brightness(30%);
+}
+
+.container {
+  display: grid;
+  background: #2a2b2f;
+  padding: 10px;
+  place-content: normal;
+  gap: 10px;
+  border: 1px solid #f1f1f1;
+}
+
+.container > div {
+  font-family: Arial, Helvetica, sans-serif;
+	background-color: #242527;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.character {
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 5;
+}
+
+.character-img {
+  margin: auto;
+  display: flex;
+}
+
+.name {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+}
+
+.age {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.xeno {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.backstory {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.traits {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+.health {
+  grid-column: 4;
+  grid-row: 6;
+}
+
+.skills {
+  grid-column: 5;
+  grid-row: 1 / span 6;
+}
+
+.data {
+  grid-column: 1 / span 5;
+  grid-row: 9;
+}
+
+.command {
+    grid-column: 1 / span 5;
+    grid-row: 8;
+}
+
+.appeal {
+  grid-column: 1 / span 2;
+  grid-row: 7;
+}
+
+.equipment {
+  grid-column: 3 / span 2;
+  grid-row: 7;
+}
+
+.relations {
+  grid-column: 5;
+  grid-row: 7;
+}
+
+.readonly {
+  background-color: #15181d !important;
+}
+
+.innergrid {
+  display: grid;
+  margin-top: 6px;
+}
+
+.innergrid > div {
+  padding: 2px;
+  text-align: center;
+  align-content: center;
+}
+
+.skills-grid {
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.relations-grid {
+  grid-template-columns: auto auto auto;
+}

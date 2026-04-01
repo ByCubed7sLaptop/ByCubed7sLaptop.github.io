@@ -15,10 +15,18 @@ export const Mario = _Mario;
 import _PaperRogue from "./projects/paperRogue";
 export const PaperRogue = _PaperRogue;
 
+import _CardGambit from "./projects/cardGambit";
+export const CardGambit = _CardGambit;
+
+import _DynamicAudio from "./projects/dynamicAudio";
+export const DynamicAudio = _DynamicAudio;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
-    Infected
+    Infected,
+    CardGambit,
+    DynamicAudio
     //Mario,
     //PaperRogue
 ];

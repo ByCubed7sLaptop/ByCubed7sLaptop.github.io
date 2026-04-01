@@ -16,14 +16,15 @@ export default function Index() {
                         display: "flex",
                         flexDirection: "row",
                         flexWrap: "wrap",
-                        justifyContent: "space-evenly"
+                        justifyContent: "center",
+                        gap: "12px"
                     }}
                 >
                     {projects.map(function(project, i) {
                         return (
                             <ProjectBox
                                 fromProject={project}
-                                style={{width: "21%"}}
+                                style={{width: "24%"}}
                             />
                         );
                     })}
