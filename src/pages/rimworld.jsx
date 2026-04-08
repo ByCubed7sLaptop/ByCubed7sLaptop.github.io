@@ -117,6 +117,11 @@ export default function App() {
 
   return (
   <div className="container">
+
+    <div className="score">
+      <small></small>
+    </div>
+    
     <div className="character">
       <h4>Character</h4>
       <img src="https://placehold.co/160x240"
