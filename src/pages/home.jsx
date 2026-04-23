@@ -170,6 +170,104 @@ export default function Index() {
                         <a href="projects">SEE MORE ✨</a>
                     </div>
                 </Part>
+
+                <Part contentStyle={{maxWidth: "1500px"}}></Part>
+                
+                <Part
+                    style={{backgroundColor: "var(--accent)"}}
+                    contentStyle={{maxWidth: "1500px"}}
+                >
+                    <Subtitle>Art & Design</Subtitle>
+
+                    <Row>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
+                            <img src="art and design/TTRPG Cards/SnakeTwist Motor.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
+                        </div>
+                        TTRPG Cards
+                    </div>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
+                            <img src="art and design/Posters/The Gang Poster.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
+                        </div>
+                        Posters
+                    </div>  
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
+                            <img src="art and design/Commissions/GrayXAppity.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
+                        </div>
+                        Commissions
+                    </div>
+                    </Row>
+
+                    <br />
+
+                    <Row style={{justifyContent: "space-evenly"}}>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
+                            <img src="art and design/Minecraft Skins/Render5.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
+                        </div>
+                        Minecraft Skins
+                    </div>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
+                            <img src="art and design/Emotes and Stickers/Stickers Stare crop.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
+                        </div>
+                        Emotes & Stickers
+                    </div>
+                        
+                    </Row>
+                
+                </Part>
+
+                <Part contentStyle={{maxWidth: "1500px"}}></Part>
+                
+                <Part
+                    style={{backgroundColor: "var(--accent)"}}
+                    contentStyle={{maxWidth: "1500px"}}
+                >
+                    <Subtitle>3D modeling</Subtitle>
+
+                    <Row>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <img src="models/Me/Render 1.png" style={{maxWidth:"100%"}}/>
+                        VRMs & Me
+                    </div>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <img src="models/2026 Tabletop/DC Table 1.jpg" style={{maxWidth:"100%"}}/>
+                        Tabletop models
+                    </div>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <img src="models/2024 Furret mod/Render 1.png" style={{maxWidth:"100%"}}/>
+                        Games & Modding
+                    </div>    
+                    </Row>
+
+                    <br />
+
+                    <Row style={{justifyContent: "space-evenly"}}>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <img src="models/2021 Weapons/Katana Render 2.png" style={{maxWidth:"100%"}}/>
+                        Katana (2021)
+                    </div>
+
+                    <div style={{width:"32%", textAlign:"center"}}>
+                        <img src="models/2022 Minecraft/Grayscaped.png" style={{maxWidth:"100%"}}/>
+                        Minecraft Renders
+                    </div>    
+                        
+                    </Row>
+                
+                </Part>
             </Article>
         </>
     );
