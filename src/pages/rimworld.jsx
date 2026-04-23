@@ -121,39 +121,39 @@ export default function App() {
     <div className="score">
       <small></small>
     </div>
-    
+
     <div className="character">
-      <h4>Character</h4>
+      <h4 className="title">Character</h4>
       <img src="https://placehold.co/160x240"
         alt="Character"
         className="character-img" />
     </div>
 
     <div className="name">
-      <h4>Name</h4>
+      <h4 className="title">Name</h4>
     </div>
     <div className="randomise">
-      <h4>Randomise</h4>
+      <h4 className="title">Randomise</h4>
     </div>
 
     <div className="age">
-      <h4>Age</h4>
+      <h4 className="title">Age</h4>
     </div>
     <div className="xeno">
-      <h4>Xeno</h4>
+      <h4 className="title">Xeno</h4>
     </div>
     <div className="backstory">
-      <h4>Backstory</h4>
+      <h4 className="title">Backstory</h4>
     </div>
     <div className="traits">
-      <h4>Traits</h4>
+      <h4 className="title">Traits</h4>
     </div>
     <div className="health">
-      <h4>Health</h4>
+      <h4 className="title">Health</h4>
     </div>
 
     <div className="skills">
-      <h4>Skills</h4>
+      <h4 className="title">Skills</h4>
       <div className="innergrid skills-grid">
         {skills.map((skill) => (
         <React.Fragment key={skill}>
@@ -169,14 +169,14 @@ export default function App() {
     </div>
 
     <div className="appeal">
-      <h4>Appeal</h4>
+      <h4 className="title">Appeal</h4>
     </div>
     <div className="equipment">
-      <h4>Equipment</h4>
+      <h4 className="title">Equipment</h4>
     </div>
 
     <div className="relations">
-      <h4>Relations</h4>
+      <h4 className="title">Relations</h4>
       <div className="innergrid relations-grid">
         {[...Array(6)].map((_, i) => (
         <React.Fragment key={i}>
@@ -189,7 +189,7 @@ export default function App() {
     </div>
 
     <div className="command readonly">
-      <h4>Command</h4>
+      <h4 className="title">Command</h4>
       <div style={{maxWidth: "100%", margin: "auto"}}
         onClick={handleCopy}
         title="Click to copy!">
@@ -204,7 +204,7 @@ export default function App() {
     </div>
 
     <div className="data readonly">
-      <h4>Data</h4>
+      <h4 className="title">Data</h4>
 
       <div style={{maxWidth: "100%", margin: "auto"}}>
         <code style={{backgroundColor: "#000", display: "block", wordBreak: "break-all", padding: "0.5%"}}>

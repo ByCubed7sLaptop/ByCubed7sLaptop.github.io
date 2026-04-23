@@ -7,8 +7,8 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import It from "./pages/it";
 import Cards from "./pages/cards";
-import ArtConsentForm from "./pages/art/consentForm";
 import Rimworld from "./pages/rimworld";
+import NotFound from "./pages/404";
 
 import Banner from "./components/banner";
 import Footer from "./components/footer";
@@ -38,11 +38,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/projects" element={<Projects />} />
                     <Route exact path="/cards" element={<Cards />} />
                     <Route exact path="/rimworld" element={<Rimworld />} />
-                    <Route
-                        exact
-                        path="/art/consentForm"
-                        element={<ArtConsentForm />}
-                    />
+                   
                     {projects.map(project => (
                         <Route
                             key={project.projectName}
@@ -57,6 +53,8 @@ createRoot(document.getElementById("root")).render(
                             element={<Blog project={project} />}
                         />
                     ))}
+
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
 
                 <Footer />

@@ -92,15 +92,14 @@ export default function Index() {
                             <br />
                             My journey has encompassed the creation of
                             high-performance applications utilizing C++ and .NET
-                            Core, as well as the development of games using
+                            Core, as well as the development of games and applications using
                             Unity and Godot.
                             <br />
                             <br />
                             I have consistently pursued the latest advancements
-                            in my field, which has led me to explore web
-                            development frameworks such as React.js and Angular
-                            as well as machine learning frameworks like
-                            TensorFlow and PyTorch.
+                            in my field, leading me to explore web development, 
+                            machine learning frameworks, rendering pipelines, 
+                            statitics, and so much more.
                         </div>
                         <div style={{padding: "1em", paddingTop: "3em"}}>
                             My experience also extends to cloud development,

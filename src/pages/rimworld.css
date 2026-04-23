@@ -1,16 +1,8 @@
-body {
-  background: #15181d;
-  color: #fff;
-}
 
-h1, h2, h3, h4, h5 {
+.title {
   line-height: normal;
   margin: 0;
   font-size: 0.8em;
-}
-
-small {
-  filter: brightness(30%);
 }
 
 .container {
