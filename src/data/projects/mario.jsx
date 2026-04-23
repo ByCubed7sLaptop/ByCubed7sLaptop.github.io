@@ -10,18 +10,15 @@ var project = Project.Create({
     backgroundPath: "default"
 });
 
-project.blog = `
-
-
-`;
+project.blog = ``;
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-project.showcase = `
-![](${project.imgPath})
+// project.showcase = `
+// ![](${project.imgPath})
 
-`;
+// `;
 
 export default project;

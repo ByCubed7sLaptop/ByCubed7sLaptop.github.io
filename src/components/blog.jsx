@@ -6,6 +6,10 @@ import MDDisplay from "./mdDisplay";
 import styles from "./blog.module.css";
 
 export default function Blog({project}) {
+
+
+    let displayEmpty = project.blog == "";
+
     return (
         <>
             <BackgroundImage src={`../../${project.backgroundPath}`} />
@@ -19,7 +23,11 @@ export default function Blog({project}) {
                             maxwidth: "100%"
                         }}
                     />
-                    <MDDisplay text={project.blog} />
+                    {
+                        displayEmpty ? 
+                        <div style={{"textAlign":"center"}}>This section hasnt been finished yet. But we're sure it's pretty interesting...</div> : 
+                        <MDDisplay text={project.blog} />
+                    }
                 </Part>
             </Article>
         </>

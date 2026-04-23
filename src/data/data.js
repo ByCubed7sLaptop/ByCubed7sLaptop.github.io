@@ -81,7 +81,7 @@ export class Project extends TimeSpan {
         tags = "no tags provided",
         imgPath = "default",
         backgroundPath = "default",
-        blog = "insert blog here",
+        blog = "",
         showcase = ""
     ) {
         super(startDate, endDate);

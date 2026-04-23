@@ -11,7 +11,7 @@ import Card from "../components/card.jsx";
 
 import {Me} from "../data/socials.js";
 
-import {DesktopCapybara, Infected, WizardRogue} from "../data/projects.js";
+import {DesktopCapybara, Infected, WizardRogue, Mario, PaperRogue} from "../data/projects.js";
 
 export default function Index() {
     // <Part>
@@ -166,6 +166,24 @@ export default function Index() {
                         />
                     </Row>
 
+                    <Row
+                        style={{
+                            height: "200px",
+                            marginBottom: "2em",
+                            justifyContent: "center"
+                        }}
+                    >
+                        <ProjectBox
+                            fromProject={Mario}
+                            style={{width: "20%", marginRight: "1em"}}
+                        />
+
+                        <ProjectBox
+                            fromProject={PaperRogue}
+                            style={{width: "20%", marginLeft: "1em"}}
+                        />
+                    </Row>
+
                     <div>
                         <a href="projects">SEE MORE ✨</a>
                     </div>
@@ -182,23 +200,29 @@ export default function Index() {
                     <Row>
 
                     <div style={{width:"32%", textAlign:"center"}}>
+                        <a href="cards">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/TTRPG Cards/SnakeTwist Motor.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>
+                        </a>
                         TTRPG Cards
                     </div>
 
                     <div style={{width:"32%", textAlign:"center"}}>
+                        <a href="https://vgen.co/ByCubed7">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/Posters/The Gang Poster.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>
+                        </a>
                         Posters
                     </div>  
 
                     <div style={{width:"32%", textAlign:"center"}}>
+                        <a href="https://vgen.co/ByCubed7">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/Commissions/GrayXAppity.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>
+                        </a>
                         Commissions
                     </div>
                     </Row>
@@ -208,16 +232,20 @@ export default function Index() {
                     <Row style={{justifyContent: "space-evenly"}}>
 
                     <div style={{width:"32%", textAlign:"center"}}>
+                        <a href="https://vgen.co/ByCubed7/service/minecraft-skin/453823d1-432d-4be3-bf0d-7fcae192e204">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/Minecraft Skins/Render5.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>
+                        </a>
                         Minecraft Skins
                     </div>
 
                     <div style={{width:"32%", textAlign:"center"}}>
+                        <a href="https://vgen.co/ByCubed7">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/Emotes and Stickers/Stickers Stare crop.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>
+                        </a>
                         Emotes & Stickers
                     </div>
                         
@@ -257,7 +285,7 @@ export default function Index() {
 
                     <div style={{width:"32%", textAlign:"center"}}>
                         <img src="models/2021 Weapons/Katana Render 2.png" style={{maxWidth:"100%"}}/>
-                        Katana (2021)
+                        Weapons
                     </div>
 
                     <div style={{width:"32%", textAlign:"center"}}>

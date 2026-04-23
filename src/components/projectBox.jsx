@@ -61,28 +61,37 @@ export default function ProjectBox({fromProject, style, insideStyle}) {
         transform: !isHovered ? "rotateY(180deg)" : "rotateY(0deg)"
     };
 
-    return (
-        <div style={styleC}>
-            <a href={fromProject.getFullShowcasePath()}>
-                <div
-                    style={insideStyleC}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
-                    <div style={flippedStyle}>
-                        <div style={backgroundImageStyle} />
-                        <div style={textStyle}>
-                            <div style={{textAlign: "center", color: "white"}}>
-                                <h2>{displayName}</h2>
-                                <p>{description}</p>
-                                <p style={{fontSize: "1.5em"}}>
-                                    <strong>{tags}</strong>
-                                </p>
-                            </div>
-                        </div>
+    let inners = (
+        <div
+            style={insideStyleC}
+        >
+            <div style={flippedStyle}>
+                <div style={backgroundImageStyle} />
+                <div style={textStyle}>
+                    <div style={{textAlign: "center", color: "white"}}>
+                        <h2>{displayName}</h2>
+                        <p>{description}</p>
+                        <p style={{fontSize: "1.5em"}}>
+                            <strong>{tags}</strong>
+                        </p>
                     </div>
                 </div>
-            </a>
+            </div>
+        </div>
+    );
+
+    return (
+        <div style={styleC}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+            {
+                fromProject.blog != "" ?
+                <a href={fromProject.getFullShowcasePath()}>
+                    {inners}
+                </a> 
+                : 
+                inners
+            }
         </div>
     );
 }

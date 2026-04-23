@@ -21,12 +21,20 @@ export const CardGambit = _CardGambit;
 import _DynamicAudio from "./projects/dynamicAudio";
 export const DynamicAudio = _DynamicAudio;
 
+import _ClockworkAngel from "./projects/clockworkAngel";
+export const ClockworkAngel = _ClockworkAngel;
+
+import _CurlingDucks from "./projects/curlingDucks";
+export const CurlingDucks = _CurlingDucks;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
     Infected,
+    Mario,
+    PaperRogue,
     CardGambit,
-    DynamicAudio
-    //Mario,
-    //PaperRogue
+    DynamicAudio,
+    ClockworkAngel,
+    CurlingDucks
 ];
