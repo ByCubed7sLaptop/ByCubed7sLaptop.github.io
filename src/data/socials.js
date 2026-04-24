@@ -82,7 +82,7 @@ export const SocialToLink = {
     bsky: "https://bsky.app/profile/bycubed7.itch.io",
     discord: "https://discord.gg/HTAQdPaKXK",
     twitch: "https://www.twitch.tv/bycubed7",
-    vgen: "https://vgen.co/",
+    vgen: "https://vgen.co/ByCubed7",
     youtube: "https://www.youtube.com/@ByCubed7",
     itchio: "https://bycubed7.itch.io/",
 }

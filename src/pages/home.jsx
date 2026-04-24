@@ -367,6 +367,7 @@ export default function Index() {
                     style={{backgroundColor: "var(--accent)"}}
                     contentStyle={{maxWidth: "1500px"}}
                 >
+                <h3 style={{textAlign:"center",marginTop:"0"}}>Come find me!</h3>
                     <Socials />
                 </Part>
 
