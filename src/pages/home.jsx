@@ -209,7 +209,7 @@ export default function Index() {
                     </div>
 
                     <div style={{width:"32%", textAlign:"center"}}>
-                        <a href="https://vgen.co/ByCubed7">
+                        <a href="posters">
                         <div style={{width:"100%", textAlign:"center", height:"340px", overflow: "hidden"}}>
                             <img src="art and design/Posters/The Gang Poster.png" style={{width:"100%", height:"100%", objectFit: "cover"}}/>
                         </div>

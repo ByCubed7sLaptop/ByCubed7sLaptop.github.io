@@ -8,6 +8,7 @@ import Projects from "./pages/projects";
 import It from "./pages/it";
 import Cards from "./pages/cards";
 import Rimworld from "./pages/rimworld";
+import Posters from "./pages/posters";
 import NotFound from "./pages/404";
 
 import Banner from "./components/banner";
@@ -38,6 +39,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/projects" element={<Projects />} />
                     <Route exact path="/cards" element={<Cards />} />
                     <Route exact path="/rimworld" element={<Rimworld />} />
+                    <Route exact path="/posters" element={<Posters />} />
                    
                     {projects.map(project => (
                         <Route
