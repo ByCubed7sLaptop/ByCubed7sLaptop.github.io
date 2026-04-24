@@ -6,7 +6,6 @@ export const Github = {
 
 export const Me = {
     name: import.meta.env.VITE_NAME,
-    //"ByCubed7",
     title: "System Architect"
 };
 
@@ -59,3 +58,40 @@ export const Certifications = [
 ];
 
 export const Gmea = "INSERT KEY HERE";
+
+
+export const Socials = [
+    "bsky",
+    "discord",
+    "twitch",
+    "vgen",
+    "youtube",
+    "itchio",
+]
+
+export const SocialToIcon = {
+    bsky: "socials/bsky.png",
+    discord: "socials/discord.png",
+    twitch: "socials/twitch.png",
+    vgen: "socials/vgen.png",
+    youtube: "socials/youtube.png",
+    itchio: "socials/itchio.png",
+}
+
+export const SocialToLink = {
+    bsky: "https://bsky.app/profile/bycubed7.itch.io",
+    discord: "https://discord.gg/HTAQdPaKXK",
+    twitch: "https://www.twitch.tv/bycubed7",
+    vgen: "https://vgen.co/",
+    youtube: "https://www.youtube.com/@ByCubed7",
+    itchio: "https://bycubed7.itch.io/",
+}
+
+export const SocialToColor = {
+    bsky: "#0086f8",
+    discord: "#4d60a9",
+    twitch: "#9246ff",
+    vgen: "#b8ff26",
+    youtube: "#ff0000",
+    itchio: "#ff5a60",
+}

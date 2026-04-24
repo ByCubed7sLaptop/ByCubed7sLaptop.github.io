@@ -26,7 +26,7 @@ export default function Index() {
                     <h2>The Havenhand Crew</h2>
                     <div style={{display:"flex"}}>
 
-                        <img src="art and design/Posters/The Gang Poster.png" style={{height:"100vh", float:"left", margin:"1em"}} />
+                        <img src="art and design/Posters/The Gang Poster.png" style={{height:"100vh", margin:"1em"}} />
                         <div style={{float:"left", margin:"1em"}} >
                             Poster made for my friends on the <a href="https://www.youtube.com/@Havenhand">Havenhand Crew</a>. 
                             To celebrate him achieving 100k subscribers on Youtube.
@@ -34,7 +34,7 @@ export default function Index() {
                             <br/>
                             <br/>
 
-                            Made in Krita, the 400ppi piece took around 12 hours to make and was an orderable print for the community as merch for some time.
+                            Made in Krita, the 300ppi piece took around 12 hours to make and was an orderable print for the community as merch for some time.
 
 
                             <br/>
@@ -52,6 +52,10 @@ export default function Index() {
                             <br/>
                             <i>"My slut levels are maxed out in that omg"</i><br/>
                             - <a href="https://www.youtube.com/@JustKerp">Kerp</a>
+
+                            <div>
+                            <img src="art and design/Posters/The Gang Poster irl.jpg" style={{height:"35vh", margin:"1em", marginTop:"3em"}} />
+                                </div>
                         </div>
 
                     </div>
@@ -74,7 +78,8 @@ export default function Index() {
                             <br/>
                             <br/>
 
-                            Made in Clipstudio, then transfered and finished on Krita, this 400ppi piece went through 4 interations and took around 16 hours to make.
+                            Made in Clipstudio, then transfered and finished on Krita. 
+                            This 400ppi piece went through 4 interations and took around 16 hours to make.
 
                             <br/>
                             <br/>
@@ -85,6 +90,8 @@ export default function Index() {
                             <br/>
                             <i>"Cubed this is MASSIVE"</i><br/>
                             - <a href="https://www.twitch.tv/heyphayphay">Phay</a>
+
+
                         </div>
                         <img src="art and design/Posters/The rogues hideout Poster.png" style={{height:"100vh", float:"left", margin:"1em"}} />
 

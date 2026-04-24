@@ -5,14 +5,8 @@ export default function ImageCollectionRow({
     children,
     ...rest
 }) {
-    const containerStyle = {
-        display: "flex"
-    };
-
     const imageStyle = {
-        width: `${100 / images.length}%`,
-        height: "auto",
-        objectFit: "cover",
+        height: "100%",
         ...imgStyle
     };
 

@@ -30,7 +30,9 @@ export default function Index() {
                     })}
                 </div>
             </Article>
-            <div style={{minHeight: "11.5vh"}}/>
+            
+            <h3 style={{textAlign:"center"}}>And more being documented soon!</h3>
+               
         </>
     );
 }
