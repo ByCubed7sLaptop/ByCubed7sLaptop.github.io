@@ -26,7 +26,7 @@ export default function Index() {
                     <h2>The Havenhand Crew</h2>
                     <div style={{display:"flex"}}>
 
-                        <img src="art and design/Posters/The Gang Poster.png" style={{height:"100vh", margin:"1em"}} />
+                        <img src="art and design/Posters/The Gang Poster.png" style={{height:"50em", margin:"1em"}} />
                         <div style={{float:"left", margin:"1em"}} >
                             Poster made for my friends on the <a href="https://www.youtube.com/@Havenhand">Havenhand Crew</a>. 
                             To celebrate him achieving 100k subscribers on Youtube.
@@ -54,7 +54,7 @@ export default function Index() {
                             - <a href="https://www.youtube.com/@JustKerp">Kerp</a>
 
                             <div>
-                            <img src="art and design/Posters/The Gang Poster irl.jpg" style={{height:"35vh", margin:"1em", marginTop:"3em"}} />
+                            <img src="art and design/Posters/The Gang Poster irl.jpg" style={{height:"30em", margin:"1em", marginTop:"3em"}} />
                                 </div>
                         </div>
 
@@ -93,7 +93,7 @@ export default function Index() {
 
 
                         </div>
-                        <img src="art and design/Posters/The rogues hideout Poster.png" style={{height:"100vh", float:"left", margin:"1em"}} />
+                        <img src="art and design/Posters/The rogues hideout Poster.png" style={{height:"53em", float:"left", margin:"1em"}} />
 
                     </div>
 

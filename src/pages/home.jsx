@@ -84,38 +84,25 @@ export default function Index() {
                             </Subtitle>
                             I'm {Me.name}, an archetype developer & software
                             engineer with a passion for programming innovation
-                            and collaboration. With a background in computer
-                            science and game development, I have developed a
+                            and collaboration; With a background in computer
+                            science, game development and scripting, I have developed a
                             diverse set of skills that enable me to tackle
                             complex projects across various domains.
+                            
                             <br />
                             <br />
                             My journey has encompassed the creation of
                             high-performance applications utilizing C++ and .NET
                             Core, as well as the development of games and applications using
-                            Unity and Godot.
-                            <br />
-                            <br />
-                            I have consistently pursued the latest advancements
-                            in my field, leading me to explore web development, 
+                            Unity and Godot. This has also lead me to explore web development, 
                             machine learning frameworks, rendering pipelines, 
-                            statitics, and so much more.
+                            statitics, and so.. so much more.
+                            
+                            <br />
+                            <br />
+                            I look forward to connecting with you!
                         </div>
                         <div style={{padding: "1em", paddingTop: "3em"}}>
-                            My experience also extends to cloud development,
-                            where I have effectively utilized platforms like AWS
-                            and Azure to design scalable and secure applications
-                            capable of accommodating high traffic volumes. I
-                            have also engaged with innovative projects in the
-                            realm of VR using OpenVR, demonstrating my
-                            commitment to integrating cutting-edge technologies
-                            into my work.
-                            <br />
-                            <br />
-                            This portfolio showcases some examples of my work,
-                            highlighting my technical skills, creativity, and
-                            ability to drive projects forward. Feel free to
-                            explore, and I look forward to connecting with you!
                         </div>
                     </Row>
                 </Part>
