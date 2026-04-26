@@ -9,7 +9,7 @@ import BackgroundImage from "../components/backgroundImage.jsx";
 import Dots from "../components/dots.jsx";
 import Card from "../components/card.jsx";
 
-import {Me} from "../data/socials.js";
+import {Me, Friends} from "../data/socials.js";
 
 export default function Index() {
     return (
@@ -40,18 +40,18 @@ export default function Index() {
                             <br/>
                             <br/>
                             <i>"Haven and I look like team rocket with that fuck ass pose"</i><br/> 
-                            - <a href="https://www.twitch.tv/Grayscaped">Gray</a>
+                            - <a href={Friends.grayscaped}>Gray</a>
                             
                             <br/>
                             <br/>
                             <i>"I look like I'm radiating Michael Jackson swag"</i><br/> 
-                            - <a href="https://www.youtube.com/@TicedUp">TicedUp</a>
+                            - <a href={Friends.ticedup}>TicedUp</a>
                             
 
                             <br/>
                             <br/>
                             <i>"My slut levels are maxed out in that omg"</i><br/>
-                            - <a href="https://www.youtube.com/@JustKerp">Kerp</a>
+                            - <a href={Friends.justkerp}>Kerp</a>
 
                             <div>
                             <img src="art and design/Posters/The Gang Poster irl.jpg" style={{height:"30em", margin:"1em", marginTop:"3em"}} />
@@ -72,7 +72,7 @@ export default function Index() {
                     <div style={{display:"flex"}}>
 
                         <div style={{float:"left", margin:"1em"}} >
-                            Poster for the team at <a href="https://www.youtube.com/@treasuredtalesrpg">Treasuredtales</a>. 
+                            Poster for the team at <a href={Friends.treasuredtales}>Treasuredtales</a>. 
                             For reaching their recent goal.
                         
                             <br/>
@@ -84,12 +84,12 @@ export default function Index() {
                             <br/>
                             <br/>
                             <i>"Now I can open my phone, and my friends will always be there to greet me~"</i><br/> 
-                            - <a href="https://throne.com/scornxiii">Scorn</a>
+                            - <a href={Friends.scornxiii}>Scorn</a>
                             
                             <br/>
                             <br/>
                             <i>"Cubed this is MASSIVE"</i><br/>
-                            - <a href="https://www.twitch.tv/heyphayphay">Phay</a>
+                            - <a href={Friends.heyphayphay}>Phay</a>
 
 
                         </div>

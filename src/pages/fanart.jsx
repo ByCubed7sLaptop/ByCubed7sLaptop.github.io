@@ -9,7 +9,7 @@ import BackgroundImage from "../components/backgroundImage.jsx";
 import Dots from "../components/dots.jsx";
 import Card from "../components/card.jsx";
 
-import {Me} from "../data/socials.js";
+import {Friends, SocialToLink} from "../data/socials.js";
 
 const imageNames = [
     "3D grem Cube by Grem.gif",
@@ -51,18 +51,22 @@ const images = imageNames
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value);
 
-const imageToSrc = images.map((name, index) => {
-    return "fanart/" + name;
-});
+const imagesToSrc = (image) => {
+    return "fanart/" + image;
+};
 
-const imagesToName = images.map((name, index) => {
-    return name.split(" by ")[0].split(".")[0];
-});
+const imagesToName = (image) => {
+    return image.split(" by ")[0].split(".")[0];
+};
 
-const imagesToAuthor = images.map((name, index) => {
-    return name.split(" by ").pop().split(".")[0];
-});
+const imagesToAuthor = (image) => {
+    return image.split(" by ").pop().split(".")[0];
+};
 
+const imagesToSocials = (image) => {
+    let author = imagesToAuthor(image);
+    return Friends[author.toLowerCase()]
+};
 
 export default function Index() {
     
@@ -73,17 +77,19 @@ export default function Index() {
             <Article>
                 <div style={{columnCount: "5", columnGap: "15px", padding: "15px"}}>
                     {images.map((src, index) => (
+                            <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
                         <div style={{breakInside: "avoid", marginBottom: "15px", background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
-                            <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imageToSrc[index]} alt={`${src}`} />
-                            <div style={{textAlign:"center", width:"100%"}}>"{imagesToName[index]}" - {imagesToAuthor[index]}</div>
+                                <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
+                                <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
                         </div>
+                            </a>
                     ))}
 
                 </div>
 
                 <Part>
-                    <Subtitle>Want add to this?</Subtitle>
-                    Ping me a dm on Discord!
+                    <h3>Want add to this? Already made art for me but I've forgotten to add it?</h3>
+                    <a href={SocialToLink.discord}>Ping me on Discord!</a>
                 </Part>
 
             </Article>

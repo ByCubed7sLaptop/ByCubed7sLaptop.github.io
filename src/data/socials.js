@@ -95,3 +95,18 @@ export const SocialToColor = {
     youtube: "#ff0000",
     itchio: "#ff5a60",
 }
+
+export const Friends = {
+    grayscaped: "https://www.twitch.tv/grayscaped",
+    scornxiii: "https://throne.com/scornxiii",
+    heyphayphay: "https://www.twitch.tv/heyphayphay",
+    nelcelestine: "https://www.youtube.com/@nelCelestine",
+    lo: "https://ko-fi.com/lo_",
+    iceprincess129: "https://ko-fi.com/iceprincess129/",
+    ticedup: "https://www.youtube.com/@TicedUp",
+    justkerp: "https://www.youtube.com/@JustKerp",
+    aether: "https://vgen.co/kipdoqq",
+    hauntedluna: "https://www.twitch.tv/HauntedLuna",
+    oceandayz: "https://www.twitch.tv/OceanDayz",
+    treasuredtales: "https://www.youtube.com/@treasuredtalesrpg"
+}

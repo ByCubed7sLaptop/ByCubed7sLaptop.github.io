@@ -9,7 +9,7 @@ import BackgroundImage from "../components/backgroundImage.jsx";
 import Dots from "../components/dots.jsx";
 import Card from "../components/card.jsx";
 
-import {Me} from "../data/socials.js";
+import {Friends} from "../data/socials.js";
 
 export default function Index() {
     return (
@@ -25,7 +25,7 @@ export default function Index() {
 
                     <img style={{width:"50%"}} src="/404.png"/>
                     <br />
-                    <small>Art by <a href="https://ko-fi.com/lo_">Lo</a>!</small>
+                    <small>Art by <a href={Friends.lo}>Lo</a>!</small>
                 </Part>
             </Article>
         </>
