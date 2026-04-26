@@ -11,7 +11,7 @@ import Card from "../components/card.jsx";
 
 import {Me} from "../data/socials.js";
 
-const imageModules = import.meta.glob("../../public/fanart/*.{png,webp,jpg,jpeg,svg}", {
+const imageModules = import.meta.glob("./fanart/*.{png,webp,jpg,jpeg,svg}", {
   eager: true,
 });
 
@@ -51,6 +51,11 @@ export default function Index() {
                     ))}
 
                 </div>
+
+                <Part>
+                    <Subtitle>Want add to this?</Subtitle>
+                    Ping me a dm on Discord!
+                </Part>
 
             </Article>
         </>
