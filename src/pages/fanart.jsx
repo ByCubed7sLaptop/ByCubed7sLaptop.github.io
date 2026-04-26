@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import ProjectBox from "../components/projectBox.jsx";
 import ImageCollectionRow from "../components/imageCollectionRow.jsx";
 import Part from "../components/part.jsx";
@@ -72,6 +74,14 @@ export default function Index() {
     
     return (
         <>
+            <Helmet>
+                <title>ByCubed7 - Fanart!</title>
+                <meta name="description" content="ByCubed7s Fanart." />
+                <meta property="og:title" content="ByCubed7 - Fanart!" />
+                <meta property="og:description" content="ByCubed7s Fanart." />
+                <meta property="og:image" content="fanart/CutieCubie%20by%20Grayscaped.png" />
+            </Helmet>
+
             <BackgroundImage src={images[7]} />
 
             <Article>
