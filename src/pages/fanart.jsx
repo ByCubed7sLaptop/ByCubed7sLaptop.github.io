@@ -11,7 +11,7 @@ import Card from "../components/card.jsx";
 
 import {Me} from "../data/socials.js";
 
-const imageModules = import.meta.glob("./fanart/*.{png,webp,jpg,jpeg,svg}", {
+const imageModules = import.meta.glob("./*.{png,webp,jpg,jpeg,svg}", {
   eager: true,
 });
 
