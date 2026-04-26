@@ -2,7 +2,6 @@ import {StrictMode} from "react";
 import ReactDOM from "react-dom/client";
 import {createRoot} from "react-dom/client";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {HelmetProvider} from 'react-helmet-async';
 
 import Home from "./pages/home";
 import Projects from "./pages/projects";
@@ -25,9 +24,7 @@ import {Me} from "./data/socials";
 import {Home as HomePath} from "./data/nav";
 
 createRoot(document.getElementById("root")).render(
-
     <StrictMode>
-        <HelmetProvider>
         <>
             <BrowserRouter>
                 <Banner
@@ -68,6 +65,5 @@ createRoot(document.getElementById("root")).render(
                 <Footer />
             </BrowserRouter>
         </>
-        </HelmetProvider>
     </StrictMode>
 );
