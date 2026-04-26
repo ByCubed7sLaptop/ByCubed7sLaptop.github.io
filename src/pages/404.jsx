@@ -21,9 +21,11 @@ export default function Index() {
                     style={{textAlign: "center"}}
                     contentStyle={{maxWidth: "1150px", margin: "auto"}}
                 >
-                    <Subtitle>404 not found</Subtitle>
+                    <Subtitle>404</Subtitle>
 
-                    <img src="/404.png"/>
+                    <img style={{width:"50%"}} src="/404.png"/>
+                    <br />
+                    <small>Art by <a href="https://ko-fi.com/lo_">Lo</a>!</small>
                 </Part>
             </Article>
         </>
