@@ -9,6 +9,7 @@ import It from "./pages/it";
 import Cards from "./pages/cards";
 import Rimworld from "./pages/rimworld";
 import Posters from "./pages/posters";
+import Fanart from "./pages/fanart";
 import NotFound from "./pages/404";
 
 import Banner from "./components/banner";
@@ -30,6 +31,7 @@ createRoot(document.getElementById("root")).render(
                     style={{backgroundColor: "var(--accent)"}}
                     name={Me.name}
                 >
+                    <a href={HomePath + "fanart"}>Fanart</a>
                     <a href={HomePath}>Home</a>
                 </Banner>
 
@@ -40,6 +42,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/cards" element={<Cards />} />
                     <Route exact path="/rimworld" element={<Rimworld />} />
                     <Route exact path="/posters" element={<Posters />} />
+                    <Route exact path="/fanart" element={<Fanart />} />
                    
                     {projects.map(project => (
                         <Route
