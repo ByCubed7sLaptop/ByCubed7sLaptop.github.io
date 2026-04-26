@@ -20,7 +20,7 @@ const imageNames = [
     "chair catboy by OceanDayz.png",
     "Cube 2 by Dana.jpg",
     "Cube by Grayscaped.png",
-    "Cube by Luna.png",
+    "Cube by HauntedLuna.png",
     "cube_cheesecake trans by Oddballmax.webp",
     "Cubed_404_Error by Lo.png",
     "cubed_the_fag by Aether.webp",
