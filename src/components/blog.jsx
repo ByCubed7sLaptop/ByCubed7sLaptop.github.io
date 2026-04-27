@@ -20,7 +20,7 @@ export default function Blog({project}) {
                         style={{
                             margin: "1em auto",
                             display: "block",
-                            maxwidth: "100%"
+                            maxWidth: "100%"
                         }}
                     />
                     {

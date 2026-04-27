@@ -27,6 +27,9 @@ export const ClockworkAngel = _ClockworkAngel;
 import _CurlingDucks from "./projects/curlingDucks";
 export const CurlingDucks = _CurlingDucks;
 
+import _Sliced from "./projects/sliced";
+export const Sliced = _Sliced;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
@@ -36,5 +39,6 @@ export var projects = [
     CardGambit,
     DynamicAudio,
     ClockworkAngel,
-    CurlingDucks
+    CurlingDucks,
+    Sliced
 ];

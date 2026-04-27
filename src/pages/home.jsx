@@ -193,7 +193,7 @@ export default function Index() {
                     style={{backgroundColor: "var(--accent)"}}
                     contentStyle={{maxWidth: "1500px"}}
                 >
-                    <Subtitle>Projects</Subtitle>
+                    <Subtitle>Game Dev</Subtitle>
 
                     <Row
                         style={{
