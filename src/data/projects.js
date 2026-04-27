@@ -30,6 +30,15 @@ export const CurlingDucks = _CurlingDucks;
 import _Sliced from "./projects/sliced";
 export const Sliced = _Sliced;
 
+import _Todolist from "./projects/todolist";
+export const Todolist = _Todolist;
+
+import _Desktopsnake from "./projects/desktopsnake";
+export const Desktopsnake = _Desktopsnake;
+
+import _Twitchbot from "./projects/twitchbot";
+export const Twitchbot = _Twitchbot;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
@@ -40,5 +49,8 @@ export var projects = [
     DynamicAudio,
     ClockworkAngel,
     CurlingDucks,
-    Sliced
+    Sliced,
+    Todolist,
+    Desktopsnake,
+    Twitchbot
 ];

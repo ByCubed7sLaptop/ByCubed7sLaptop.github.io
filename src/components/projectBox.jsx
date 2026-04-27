@@ -21,6 +21,12 @@ export default function ProjectBox({fromProject, style, insideStyle}) {
         ...style
     };
 
+    if (fromProject.blog != "") {
+        styleC["border"] = "#00f7ff55";
+        styleC.borderStyle = "dashed";
+        styleC.borderWidth = "1px";
+    }
+
     const insideStyleC = {
         flexGrow: "1",
         display: "flex",
@@ -91,6 +97,12 @@ export default function ProjectBox({fromProject, style, insideStyle}) {
                 </a> 
                 : 
                 inners
+            }
+            {
+                fromProject.blog != "" ?
+                undefined
+                : 
+                "Docs in progress!"
             }
         </div>
     );
