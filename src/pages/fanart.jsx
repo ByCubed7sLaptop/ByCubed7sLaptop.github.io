@@ -42,7 +42,9 @@ const imageNames = [
     "Untitled890_20250804220043 by Meow.png",
     "Untitled925_20250902142752 by Meow.png",
     "Untitled959_20251001081553 by Meow.png",
-    "Wizard by Seaphoenix.png"
+    "Wizard by Seaphoenix.png",
+    "CUBIEE by Aether.png",
+    "Mii by Aether.jpg"
 ]
 
 
@@ -69,7 +71,7 @@ const imagesToSocials = (image) => {
 };
 
 export default function Index() {
-    
+
     return (
         <>
             <BackgroundImage src={images[7]} />
