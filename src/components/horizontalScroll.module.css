@@ -1,7 +1,7 @@
 .scrollContainer {
   display: flex;
-  overflow: hidden;  /* Hide the scroll bar */
-  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  white-space: nowrap;
   width: 100%;
 }
 
