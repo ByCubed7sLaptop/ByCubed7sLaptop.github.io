@@ -12,6 +12,7 @@ import Socials from "../components/socialIcons.jsx";
 import {Me} from "../data/socials.js";
 
 import {DesktopCapybara, Infected, WizardRogue, Mario, PaperRogue} from "../data/projects.js";
+import HorizontalScroll from "../components/horizontalScroll.jsx";
 
 export default function Index() {
     // <Part>
@@ -124,68 +125,51 @@ export default function Index() {
                             "languages/DirectXOpenGL.png",
                         ]}
                     />
-                    <ImageCollectionRow
-                        style={{
-                            justifyContent: "space-evenly",
-                            maxWidth: "1150px",
-                            margin: "0.5em auto",
-                            height: "3em"
-                        }}
-                        imgStyle={{height: "100%", filter: "brightness(0) invert()"}}
-                        images={[
-                            "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-                            "https://camo.githubusercontent.com/d301c9e3a1d71bd0d78474a7083e834bf077ec8e6a8b36b784b8c421f1c9ef21/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f707074726465762f707074726465762d6f6666696369616c2e737667",
-                            "https://camo.githubusercontent.com/31c41a7e1d08f46fb7e204ee09c48c8697b69616c44d87e9fd51c3108679b6eb/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7079746f7263682f7079746f7263682d69636f6e2e737667",
-                            "https://camo.githubusercontent.com/48d901d5fed509b5f2dd13ecb8246653f66e655d5e7838450460b04360942a43/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yaml/yaml-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yarn/yarn-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/linuxmint/linuxmint-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/windows11/windows11-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/wolfram/wolfram-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vulkan/vulkan-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualbasic/visualbasic-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/typescript/typescript-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/twilio/twilio-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/threejs/threejs-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/tensorflow/tensorflow-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vscode/vscode-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualstudio/visualstudio-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vite/vite-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vitejs/vitejs-plain.svg",
-                        ]}
-                        />
-                    <ImageCollectionRow
-                        style={{
-                            justifyContent: "space-evenly",
-                            maxWidth: "1150px",
-                            margin: "0.5em auto",
-                            width: "100%",
-                            height: "3em"
-                        }}
-                        imgStyle={{height: "100%", filter: "brightness(0) invert()"}}
-                        images={[
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/sqlite/sqlite-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/spyder/spyder-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/rust/rust-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/ruby/ruby-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/renpy/renpy-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/react/react-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pyscript/pyscript-plain-wordmark.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pypi/pypi-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pycharm/pycharm-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/opentelemetry/opentelemetry-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/openapi/openapi-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/openal/openal-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/numpy/numpy-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/nuget/nuget-original.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/npm/npm-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/nodejs/nodejs-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/maven/maven-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/matplotlib/matplotlib-plain.svg",
-                            "https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/markdown/markdown-original.svg",
 
-                        ]}
-                    />
+                    <HorizontalScroll style={{height:"3em", width:"150%", transform: "translate(-18%,0)"}} speed="1">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://camo.githubusercontent.com/d301c9e3a1d71bd0d78474a7083e834bf077ec8e6a8b36b784b8c421f1c9ef21/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f707074726465762f707074726465762d6f6666696369616c2e737667" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://camo.githubusercontent.com/31c41a7e1d08f46fb7e204ee09c48c8697b69616c44d87e9fd51c3108679b6eb/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7079746f7263682f7079746f7263682d69636f6e2e737667" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://camo.githubusercontent.com/48d901d5fed509b5f2dd13ecb8246653f66e655d5e7838450460b04360942a43/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yaml/yaml-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yarn/yarn-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/linuxmint/linuxmint-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/windows11/windows11-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/wolfram/wolfram-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vulkan/vulkan-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualbasic/visualbasic-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/typescript/typescript-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/twilio/twilio-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/threejs/threejs-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/tensorflow/tensorflow-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vscode/vscode-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualstudio/visualstudio-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vite/vite-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vitejs/vitejs-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                    </HorizontalScroll>
+
+                    <HorizontalScroll style={{height:"3em", width:"120%", transform: "translate(-10%,0)"}}>
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/sqlite/sqlite-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/spyder/spyder-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/rust/rust-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/ruby/ruby-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/renpy/renpy-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/react/react-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pyscript/pyscript-plain-wordmark.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pypi/pypi-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pycharm/pycharm-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/opentelemetry/opentelemetry-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/openapi/openapi-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/openal/openal-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/numpy/numpy-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/nuget/nuget-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/npm/npm-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/nodejs/nodejs-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/maven/maven-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/matplotlib/matplotlib-plain.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/markdown/markdown-original.svg" style={{height: "100%", filter: "brightness(0) invert()"}} loading="lazy" />
+                    </HorizontalScroll>
+
                     <h3 style={{textAlign:"center"}}>144+ Projects deployed across so <i>so</i> many environments<br/><small>(help)</small></h3>
                 </Part>
 

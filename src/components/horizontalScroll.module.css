@@ -1,0 +1,11 @@
+.scrollContainer {
+  display: flex;
+  overflow: hidden;  /* Hide the scroll bar */
+  white-space: nowrap; /* Prevent wrapping */
+  width: 100%;
+}
+
+.scrollItem * {
+  display: inline-block;
+  margin-right: 1em;
+}
