@@ -44,14 +44,19 @@ const imageNames = [
     "Untitled959_20251001081553 by Meow.png",
     "Wizard by Seaphoenix.png",
     "CUBIEE by Aether.png",
-    "Mii by Aether.jpg"
+    "Mii by Aether.jpg",
+    "bycubed by Croc.png",
+    "no_salt by Salsa.webp",
+    "Soon forgotten style by Aether.png"
 ]
 
 
-const images = imageNames
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
+const head = imageNames.slice(0, -3)
+  .map(value => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value);
+const tail = imageNames.slice(-3).reverse();
+const images = head;
 
 const imagesToSrc = (image) => {
     return "fanart/" + image;
@@ -77,13 +82,28 @@ export default function Index() {
             <BackgroundImage src={images[7]} />
 
             <Article>
+
+                <h2>New!</h2>
+                <div style={{display: "flex", justifyContent: "space-around"}}>
+                    {tail.map((src, index) => (
+                        <a href={imagesToSocials(src)} style={{textDecoration: "none", width: "30%"}}>
+                            <div style={{breakInside: "avoid", marginBottom: "15px",  background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
+                                    <img style={{imageRendering: "pixelated", display: "block", width: "auto", height: "auto", margin:"auto", maxHeight: "70vh", maxWidth: "100%"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
+                                    <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
+                            </div>
+                        </a>
+                    ))}
+
+                </div>
+
+                <h3 style={{margin: "0"}}>And more!</h3>
                 <div style={{columnCount: "5", columnGap: "15px", padding: "15px"}}>
                     {images.map((src, index) => (
                             <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
-                        <div style={{breakInside: "avoid", marginBottom: "15px", background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
-                                <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
-                                <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
-                        </div>
+                                <div style={{breakInside: "avoid", marginBottom: "15px", background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
+                                        <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
+                                        <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
+                                </div>
                             </a>
                     ))}
 
