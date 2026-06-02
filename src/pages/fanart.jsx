@@ -45,9 +45,10 @@ const imageNames = [
     "Wizard by Seaphoenix.png",
     "CUBIEE by Aether.png",
     "Mii by Aether.jpg",
-    "bycubed by Croc.png",
     "no_salt by Salsa.webp",
-    "Soon forgotten style by Aether.png"
+    "bycubed by Croc.png",
+    "Soon forgotten style by Aether.png",
+    "Havencrew by Meow.png",
 ]
 
 
@@ -86,14 +87,15 @@ export default function Index() {
                 <h2>New!</h2>
                 <div style={{display: "flex", justifyContent: "space-around"}}>
                     {tail.map((src, index) => (
-                        <a href={imagesToSocials(src)} style={{textDecoration: "none", width: "30%"}}>
-                            <div style={{breakInside: "avoid", marginBottom: "15px",  background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
-                                    <img style={{imageRendering: "pixelated", display: "block", width: "auto", height: "auto", margin:"auto", maxHeight: "70vh", maxWidth: "100%"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
-                                    <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
-                            </div>
-                        </a>
+                        <div style={{width: "30%"}}>
+                            <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
+                                <div style={{breakInside: "avoid", marginBottom: "15px",  background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
+                                        <img style={{imageRendering: "pixelated", display: "block", width: "auto", height: "auto", margin:"auto", maxHeight: "70vh", maxWidth: "100%"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
+                                        <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
+                                </div>
+                            </a>
+                        </div>
                     ))}
-
                 </div>
 
                 <h3 style={{margin: "0"}}>And more!</h3>
