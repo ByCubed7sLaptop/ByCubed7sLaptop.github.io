@@ -32,6 +32,7 @@ const imageNames = [
     "Cursed Cube by Caspian.png",
     "CutieCubie by Grayscaped.png",
     "Happy born day by Bean.webp",
+    "makeout sesh by Aether.png",
     "magic cube taco with taco toppings by Grem.png",
     "Merry Cubemas by Connor.webp",
     "Miscarriage Apology by Aether.png",
@@ -49,6 +50,7 @@ const imageNames = [
     "bycubed by Croc.png",
     "Soon forgotten style by Aether.png",
     "Havencrew by Meow.png",
+    "cube chair by Aether.png",
 ]
 
 
