@@ -39,6 +39,9 @@ export const Desktopsnake = _Desktopsnake;
 import _Twitchbot from "./projects/twitchbot";
 export const Twitchbot = _Twitchbot;
 
+import _Elderwilds from "./projects/elderwilds";
+export const Elderwilds = _Elderwilds;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
@@ -52,5 +55,6 @@ export var projects = [
     Sliced,
     Todolist,
     Desktopsnake,
-    Twitchbot
+    Twitchbot,
+    Elderwilds
 ];
