@@ -51,9 +51,10 @@ const imageNames = [
     "Soon forgotten style by Aether.png",
     "Havencrew by Meow.png",
     "cube chair by Aether.png",
-    "cube by Moto.png",
-    "IMG_0644 by SilverEme.png",
+    "cube warriorcat by Aether.png",
     "Elderwilds by Aether.png",
+    "IMG_0644 by SilverEme.png",
+    "cube by Moto.png",
 ]
 
 
