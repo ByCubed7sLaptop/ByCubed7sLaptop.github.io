@@ -11,87 +11,28 @@ import Card from "../components/card.jsx";
 
 import {Friends, SocialToLink} from "../data/socials.js";
 
-const imageNames = [
-    "3D grem Cube by Grem.gif",
-    "Birthday card 2 by delta.webp",
-    "Birthday card by delta.webp",
-    "ByCubed Snail emoteozaza by Grem.png",
-    "Cat Art Request by Phay.png",
-    "chair catboy by OceanDayz.png",
-    "Cube 2 by Dana.jpg",
-    "Cube by Grayscaped.png",
-    "Cube by HauntedLuna.png",
-    "cube_cheesecake trans by Oddballmax.webp",
-    "Cubed_404_Error by Lo.png",
-    "cubed_the_fag by Aether.webp",
-    "cube_fan_art by Oddballmax.webp",
-    "Cube legs by Caspian.png",
-    "Cube milk by Dana.png",
-    "Cube on 4 legs by HauntedLuna.png",
-    "Cube Pinned by IcePrincess129.png",
-    "Cursed Cube by Caspian.png",
-    "CutieCubie by Grayscaped.png",
-    "Happy born day by Bean.webp",
-    "makeout sesh by Aether.png",
-    "magic cube taco with taco toppings by Grem.png",
-    "Merry Cubemas by Connor.webp",
-    "Miscarriage Apology by Aether.png",
-    "ms paint drawing by captain_salsa.png",
-    "Spheal by Tutt.png",
-    "the_cube by Oddballmax.jpg",
-    "The gang by Meow.png",
-    "Untitled890_20250804220043 by Meow.png",
-    "Untitled925_20250902142752 by Meow.png",
-    "Untitled959_20251001081553 by Meow.png",
-    "Wizard by Seaphoenix.png",
-    "CUBIEE by Aether.png",
-    "Mii by Aether.jpg",
-    "no_salt by Salsa.webp",
-    "bycubed by Croc.png",
-    "Soon forgotten style by Aether.png",
-    "Havencrew by Meow.png",
-    "cube chair by Aether.png",
-    "cube warriorcat by Aether.png",
-    "Elderwilds by Aether.png",
-    "IMG_0644 by SilverEme.png",
-    "cube by Moto.png",
-    "drunmk dodoles4 by Aether.png",
-    "drunmk dodoles3 by Aether.png",
-    "drunmk dodoles2 by Aether.png",
-    "drunmk dodoles1 by Aether.png",
-    "LolCube_Art by LostAlice.png"
-]
+import Fanart from "../data/fanart.json"
 
-
-const head = imageNames.slice(0, -3)
-  .map(value => ({ value, sort: Math.random() }))
-  .sort((a, b) => a.sort - b.sort)
-  .map(({ value }) => value);
-const tail = imageNames.slice(-3).reverse();
-const images = head;
+const images = Fanart.sort((a, b) => Date.parse(a.created) - Date.parse(b.created));
+const head = images.slice(0, -3).reverse();
+//  .map(value => ({ value, sort: Math.random() }))
+//  .sort((a, b) => a.sort - b.sort)
+//  .map(({ value }) => value);
+const tail = images.slice(-3).reverse();
 
 const imagesToSrc = (image) => {
-    return "fanart/" + image;
-};
-
-const imagesToName = (image) => {
-    return image.split(" by ")[0].split(".")[0];
-};
-
-const imagesToAuthor = (image) => {
-    return image.split(" by ").pop().split(".")[0];
+    return "fanart/" + image.filename;
 };
 
 const imagesToSocials = (image) => {
-    let author = imagesToAuthor(image);
-    return Friends[author.toLowerCase()]
+    return Friends[image.author.toLowerCase()]
 };
 
 export default function Index() {
 
     return (
         <>
-            <BackgroundImage src={images[7]} />
+            <BackgroundImage src={head[7]} />
 
             <Article>
 
@@ -102,7 +43,7 @@ export default function Index() {
                             <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
                                 <div style={{breakInside: "avoid", marginBottom: "15px",  background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
                                         <img style={{imageRendering: "pixelated", display: "block", width: "auto", height: "auto", margin:"auto", maxHeight: "70vh", maxWidth: "100%"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
-                                        <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
+                                        <div style={{textAlign:"center", width:"100%"}}>"{src.title}" - {src.author}</div>
                                 </div>
                             </a>
                         </div>
@@ -111,11 +52,11 @@ export default function Index() {
 
                 <h3 style={{margin: "0"}}>And more!</h3>
                 <div style={{columnCount: "5", columnGap: "15px", padding: "15px"}}>
-                    {images.map((src, index) => (
+                    {head.map((src, index) => (
                             <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
                                 <div style={{breakInside: "avoid", marginBottom: "15px", background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
                                         <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
-                                        <div style={{textAlign:"center", width:"100%"}}>"{imagesToName(src)}" - {imagesToAuthor(src)}</div>
+                                        <div style={{textAlign:"center", width:"100%"}}>"{src.title}" - {src.author}</div>
                                 </div>
                             </a>
                     ))}
