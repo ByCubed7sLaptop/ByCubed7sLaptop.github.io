@@ -42,6 +42,12 @@ export const Twitchbot = _Twitchbot;
 import _Elderwilds from "./projects/elderwilds";
 export const Elderwilds = _Elderwilds;
 
+import _MinecraftSkinPreview from "./projects/minecraftSkinPreview";
+export const MinecraftSkinPreviews = _MinecraftSkinPreview;
+
+import _GenshinTable from "./projects/genshinTable";
+export const GenshinTable = _GenshinTable;
+
 export var projects = [
     DesktopCapybara,
     WizardRogue,
@@ -56,5 +62,7 @@ export var projects = [
     Todolist,
     Desktopsnake,
     Twitchbot,
-    Elderwilds
-];
+    Elderwilds,
+    MinecraftSkinPreviews,
+    GenshinTable
+].sort((a,b) => b.startDate - a.startDate);
