@@ -20,7 +20,7 @@ export default function Index() {
                         gap: "12px"
                     }}
                 >
-                    {projects.map(function(project, i) {
+                    {projects.sort((a, b) => b.blog.length - a.blog.length).map(function(project, i) {
                         return (
                             <ProjectBox
                                 fromProject={project}
