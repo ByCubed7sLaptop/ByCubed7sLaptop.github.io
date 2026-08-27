@@ -13,6 +13,7 @@ import Fanart from "./pages/fanart";
 import NotFound from "./pages/404";
 
 import Banner from "./components/banner";
+import ShowOnScrollDown from "./components/showOnScrollDown";
 import Footer from "./components/footer";
 import Blog from "./components/blog";
 import Showcase from "./components/showcase";
@@ -29,11 +30,18 @@ createRoot(document.getElementById("root")).render(
             <BrowserRouter>
                 <Banner
                     style={{backgroundColor: "var(--accent)"}}
-                    name={Me.name}
+                    name=""
                 >
                     <a href={HomePath + "fanart"}>Fanart</a>
                     <a href={HomePath}>Home</a>
                 </Banner>
+                <ShowOnScrollDown
+                    style={{backgroundColor: "var(--accent)"}}
+                    name={Me.name}
+                >
+                    <a href={HomePath + "fanart"}>Fanart</a>
+                    <a href={HomePath}>Home</a>
+                </ShowOnScrollDown>
 
                 <Routes>
                     <Route exact path="/" element={<Home />} />
@@ -43,7 +51,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/rimworld" element={<Rimworld />} />
                     <Route exact path="/posters" element={<Posters />} />
                     <Route exact path="/fanart" element={<Fanart />} />
-                   
+
                     {projects.map(project => (
                         <Route
                             key={project.projectName}

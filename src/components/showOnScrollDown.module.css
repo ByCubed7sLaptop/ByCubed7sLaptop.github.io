@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  transform: translateY(-200%);
+  transition: transform 0.35s ease;
+  z-index: 1000;
+}
+
+.header.show {
+  transform: translateY(0);
+}
