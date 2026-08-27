@@ -1,108 +1,44 @@
-import {useState} from "react";
+import styles from "./projectBox.module.css"
+import { useState } from "react";
 
-export default function ProjectBox({fromProject, style, insideStyle}) {
+export default function ProjectBox({ fromProject, style, insideStyle }) {
     const [isHovered, setIsHovered] = useState(false);
 
     if (fromProject === undefined) return <></>;
 
-    var displayName = fromProject.displayName;
-    var name = fromProject.projectName;
-    var description = fromProject.description;
-    var tags = fromProject.tags;
-    var path = fromProject.imgPath;
-
-    const styleC = {
-        display: "flex",
-        alignItems: "stretch",
-        position: "relative",
-        minHeight: "1px",
-        boxSizing: "border-box",
-        width: "32%",
-        ...style
-    };
-
-    if (fromProject.blog != "") {
-        styleC["border"] = "#00f7ff55";
-        styleC.borderStyle = "dashed";
-        styleC.borderWidth = "1px";
-    }
-
-    const insideStyleC = {
-        flexGrow: "1",
-        display: "flex",
-        flexDirection: "column",
-        zIndex: "1",
-        minHeight: "250px",
-        ...insideStyle
-    };
-
-    const flippedStyle = {
-        zIndex: "0"
-    };
-
-    const insideContainerStyle = {
-        height: "100%",
-        width: "100%",
-        backfaceVisibility: "hidden",
-        position: "absolute",
-        top: "0",
-        left: "0",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        transition: "transform .5s ease-in-out",
-        transformStyle: "preserve-3d"
-    };
+    const hasBlog = fromProject.blog != "";
 
     const backgroundImageStyle = {
-        ...insideContainerStyle,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundImage: `url('${path}')`,
+        backgroundImage: `url('${fromProject.imgPath}')`,
         transform: isHovered ? "rotateY(180deg)" : "rotateY(0deg)"
     };
 
     const textStyle = {
-        ...insideContainerStyle,
         transform: !isHovered ? "rotateY(180deg)" : "rotateY(0deg)"
     };
 
-    let inners = (
-        <div
-            style={insideStyleC}
-        >
-            <div style={flippedStyle}>
-                <div style={backgroundImageStyle} />
-                <div style={textStyle}>
-                    <div style={{textAlign: "center", color: "white"}}>
-                        <h2>{displayName}</h2>
-                        <p>{description}</p>
-                        <p style={{fontSize: "1.5em"}}>
-                            <strong>{tags}</strong>
-                        </p>
+    return (
+        <div className={`${styles.projectBox} ${hasBlog ? styles.hasBlog : ""}`} style={style}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}>
+            <a href={hasBlog ? fromProject.getFullShowcasePath() : undefined}>
+                <div className={styles.inside} style={insideStyle}>
+                    <div className={styles.flipped}>
+                        <div className={[styles.insideContainer, styles.backgroundImage].join(" ")} style={backgroundImageStyle} />
+                        <div className={styles.insideContainer} style={textStyle}>
+                            <div className={styles.insideContainerText}>
+                                <h2>{fromProject.displayName}</h2>
+                                <p>{fromProject.description}</p>
+                                <p style={{ fontSize: "1em" }}>
+                                    <strong>{fromProject.tags}</strong>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    );
-
-    return (
-        <div style={styleC}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}>
+            </a>
             {
-                fromProject.blog != "" ?
-                <a href={fromProject.getFullShowcasePath()}>
-                    {inners}
-                </a> 
-                : 
-                inners
-            }
-            {
-                fromProject.blog != "" ?
-                undefined
-                : 
-                "Docs in progress!"
+                hasBlog ? "" : "Docs in progress!"
             }
         </div>
     );
