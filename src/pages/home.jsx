@@ -11,7 +11,7 @@ import Dots from "../components/dots.jsx";
 import Socials from "../components/socialIcons.jsx";
 import {Me} from "../data/socials.js";
 
-import {DesktopCapybara, Infected, WizardRogue, Mario, PaperRogue} from "../data/projects.js";
+import {PlasmaEngine, Infected, WizardRogue, MarioProject, PaperRogue} from "../data/projects.js";
 import HorizontalScroll from "../components/horizontalScroll.jsx";
 
 export default function Index() {
@@ -186,7 +186,7 @@ export default function Index() {
                         }}
                     >
                         <ProjectBox
-                            fromProject={DesktopCapybara}
+                            fromProject={PlasmaEngine}
                             style={{width: "32%"}}
                         />
 
@@ -209,7 +209,7 @@ export default function Index() {
                         }}
                     >
                         <ProjectBox
-                            fromProject={Mario}
+                            fromProject={MarioProject}
                             style={{width: "20%", marginRight: "1em"}}
                         />
 

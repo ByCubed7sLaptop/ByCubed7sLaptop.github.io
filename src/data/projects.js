@@ -1,68 +1,67 @@
 import {Project} from "./data";
 
-import _DesktopCapybara from "./projects/plasma";
-export var DesktopCapybara = _DesktopCapybara;
+import _CubedsTodolist from "./projects/todolist";
+export var CubedsTodolist = _CubedsTodolist;
 
-import _WizardRogue from "./projects/wizardRogue";
-export const WizardRogue = _WizardRogue;
-
-import _Infected from "./projects/infected";
-export const Infected = _Infected;
-
-import _Mario from "./projects/mario";
-export const Mario = _Mario;
-
-import _PaperRogue from "./projects/paperRogue";
-export const PaperRogue = _PaperRogue;
-
-import _CardGambit from "./projects/cardGambit";
-export const CardGambit = _CardGambit;
-
-import _DynamicAudio from "./projects/dynamicAudio";
-export const DynamicAudio = _DynamicAudio;
-
-import _ClockworkAngel from "./projects/clockworkAngel";
-export const ClockworkAngel = _ClockworkAngel;
+import _TwitchIRCBot from "./projects/twitchbot";
+export var TwitchIRCBot = _TwitchIRCBot;
 
 import _CurlingDucks from "./projects/curlingDucks";
-export const CurlingDucks = _CurlingDucks;
+export var CurlingDucks = _CurlingDucks;
 
-import _Sliced from "./projects/sliced";
-export const Sliced = _Sliced;
+import _WizardRogue from "./projects/wizardRogue";
+export var WizardRogue = _WizardRogue;
 
-import _Todolist from "./projects/todolist";
-export const Todolist = _Todolist;
+import _GenshinTabletopSimulatorTable from "./projects/genshinTable";
+export var GenshinTabletopSimulatorTable = _GenshinTabletopSimulatorTable;
 
-import _Desktopsnake from "./projects/desktopsnake";
-export const Desktopsnake = _Desktopsnake;
+import _ClockworkAngel from "./projects/clockworkAngel";
+export var ClockworkAngel = _ClockworkAngel;
 
-import _Twitchbot from "./projects/twitchbot";
-export const Twitchbot = _Twitchbot;
+import _Infected from "./projects/infected";
+export var Infected = _Infected;
 
-import _Elderwilds from "./projects/elderwilds";
-export const Elderwilds = _Elderwilds;
+import _PlasmaEngine from "./projects/plasma";
+export var PlasmaEngine = _PlasmaEngine;
 
 import _MinecraftSkinPreview from "./projects/minecraftSkinPreview";
-export const MinecraftSkinPreviews = _MinecraftSkinPreview;
+export var MinecraftSkinPreview = _MinecraftSkinPreview;
 
-import _GenshinTable from "./projects/genshinTable";
-export const GenshinTable = _GenshinTable;
+import _PaperRogue from "./projects/paperRogue";
+export var PaperRogue = _PaperRogue;
 
-export var projects = [
-    DesktopCapybara,
-    WizardRogue,
-    Infected,
-    Mario,
-    PaperRogue,
-    CardGambit,
-    DynamicAudio,
-    ClockworkAngel,
-    CurlingDucks,
-    Sliced,
-    Todolist,
-    Desktopsnake,
-    Twitchbot,
-    Elderwilds,
-    MinecraftSkinPreviews,
-    GenshinTable
+import _SlicedAStoryOfPizza from "./projects/sliced";
+export var SlicedAStoryOfPizza = _SlicedAStoryOfPizza;
+
+import _Elderwilds from "./projects/elderwilds";
+export var Elderwilds = _Elderwilds;
+
+import _CardGambit from "./projects/cardGambit";
+export var CardGambit = _CardGambit;
+
+import _DynamicAudio from "./projects/dynamicAudio";
+export var DynamicAudio = _DynamicAudio;
+
+import _DesktopSnake from "./projects/desktopsnake";
+export var DesktopSnake = _DesktopSnake;
+
+import _MarioProject from "./projects/mario";
+export var MarioProject = _MarioProject;
+
+export var projects = [	CubedsTodolist,
+	TwitchIRCBot,
+	CurlingDucks,
+	WizardRogue,
+	GenshinTabletopSimulatorTable,
+	ClockworkAngel,
+	Infected,
+	PlasmaEngine,
+	MinecraftSkinPreview,
+	PaperRogue,
+	SlicedAStoryOfPizza,
+	Elderwilds,
+	CardGambit,
+	DynamicAudio,
+	DesktopSnake,
+	MarioProject,
 ].sort((a,b) => b.startDate - a.startDate);

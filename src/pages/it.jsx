@@ -9,7 +9,7 @@ import Dots from "../components/dots.jsx";
 import Aes from "../components/aes.jsx";
 import ResponsiveGrid from "../components/responsiveGrid.jsx";
 
-import {DesktopCapybara, Infected, WizardRogue} from "../data/projects";
+import {PlasmaEngine, Infected, WizardRogue} from "../data/projects";
 import {Me, Cv, Experiences, Certifications} from "../data/socials";
 
 import "./it.css";
