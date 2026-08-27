@@ -25,6 +25,7 @@ export default function Index() {
                             <ProjectBox
                                 fromProject={project}
                                 style={{width: "24%"}}
+                                key={i}
                             />
                         );
                     })}
