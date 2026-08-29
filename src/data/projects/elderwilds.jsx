@@ -4,9 +4,9 @@ var project = Project.Create({
     endDate: new Date(),
     displayName: "Elderwilds",
     projectName: "elderwilds",
-    description: "Mods for a survival minecraft playthrough.",
+    description: "Website and Plugins for a survival minecraft MMO.",
     tags: "Java, Modding",
-    imgPath: "projects/elderwilds/card.png",
+    imgPath: "card",
     backgroundPath: "default"
 });
 

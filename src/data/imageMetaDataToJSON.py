@@ -70,3 +70,8 @@ def generate_metadata_json(directory, output_file="images_metadata.json"):
         json.dump(images, f, indent=4, ensure_ascii=False)
 
     print(f"Saved metadata for {len(images)} images to {output_file}")
+
+
+if __name__ == "__main__":
+    generate_metadata_json("/media/bycubed7/New Volume/Projects/websiteV2/thatoneprogrammer/public/fanart",
+                           "/media/bycubed7/New Volume/Projects/websiteV2/thatoneprogrammer/src/data/fanart.json")
