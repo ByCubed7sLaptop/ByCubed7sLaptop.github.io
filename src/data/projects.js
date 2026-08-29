@@ -1,3 +1,4 @@
+// Generated with contructProjectsjsFile.py!
 import {Project} from "./data";
 
 import _CubedsTodolist from "./projects/todolist";
@@ -30,6 +31,9 @@ export var MinecraftSkinPreview = _MinecraftSkinPreview;
 import _PaperRogue from "./projects/paperRogue";
 export var PaperRogue = _PaperRogue;
 
+import _UselessSwitch from "./projects/uselessSwitch";
+export var UselessSwitch = _UselessSwitch;
+
 import _SlicedAStoryOfPizza from "./projects/sliced";
 export var SlicedAStoryOfPizza = _SlicedAStoryOfPizza;
 
@@ -58,6 +62,7 @@ export var projects = [	CubedsTodolist,
 	PlasmaEngine,
 	MinecraftSkinPreview,
 	PaperRogue,
+	UselessSwitch,
 	SlicedAStoryOfPizza,
 	Elderwilds,
 	CardGambit,
