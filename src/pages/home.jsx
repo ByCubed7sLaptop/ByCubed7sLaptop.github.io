@@ -9,10 +9,12 @@ import BackgroundImage from "../components/backgroundImage.jsx";
 import Dots from "../components/dots.jsx";
 // import Card from "../components/card.jsx";
 import Socials from "../components/socialIcons.jsx";
+import Aes from "../components/aes.jsx";
 import { Me } from "../data/socials.js";
 
 import { PlasmaEngine, Infected, WizardRogue, MarioProject, PaperRogue } from "../data/projects.js";
 import HorizontalScroll from "../components/horizontalScroll.jsx";
+
 
 export default function Index() {
     // <Part>
@@ -46,21 +48,37 @@ export default function Index() {
                             marginRight: "2%"
                         }}
                     >
-                        <h1
+                        <div
                             style={{
-                                fontSize: "3em",
                                 letterSpacing: "-0.05em",
                                 float: "right",
                                 lineHeight: "50px",
                                 textAlign: "right"
                             }}
                         >
-                            <span style={{}}>{Me.name}</span>
-                            <br />
-                            <span style={{color: "purple", fontSize: "0.8em"}}>
+                            <h1 style={{ fontSize: "3em", margin: "0" }}>{Me.name}</h1>
+                            <h1 style={{ color: "purple", margin: "0 0 0 10px", fontSize: "2em" }}>
                                 {Me.title}
-                            </span>
-                        </h1>
+                            </h1>
+                            <div style={{
+                                maxWidth: "500px",
+                                float: "right", lineHeight: "initial"
+                            }}>
+                                Archetype developer & software
+                                engineer <br /> Passionate for programming, innovation and collaboration
+                            </div>
+
+                            <div style={{ maxWidth: "500px", lineHeight: "initial", transform: "translate(20px, 30px)" }}>
+                                <small>
+                                    <Aes
+                                        k="9OnhsAYc12P8ZuBZJ6XZPdsbvQGQLiuLK-egu0toX64"
+                                        decode
+                                    >CUhfh31xXtk5QeFbYtkrT5QsLApdM6vXPp8tytC4xM
+                                    </Aes>
+                                </small>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div style={{ float: "left", width: "50%" }}>
@@ -79,31 +97,28 @@ export default function Index() {
 
                 <Part style={{ backgroundColor: "var(--accent)" }}>
                     <Row>
-                        <div style={{ padding: "1em", minWidth: "60%" }}>
+                        <div style={{ padding: "1em", minWidth: "30%" }}>
                             <Subtitle style={{ color: "purple" }}>
                                 Hello!
                             </Subtitle>
-                            I'm {Me.name}, an archetype developer & software
-                            engineer with a passion for programming innovation
-                            and collaboration; With a background in computer
-                            science, game development and scripting, I have developed a
-                            diverse set of skills that enable me to tackle
-                            complex projects across various domains.
-                            
+                            I'm {Me.name}, over the years I have developed a huge personal background in computer
+                            science, game dev and programming. I have developed a diverse set of skills that enable me to tackle
+                            complex projects across all domains.
+
                             <br />
                             <br />
-                            My journey has encompassed the creation of
+                        </div>
+                        <div style={{ padding: "1em", paddingTop: "3em" }}>
+                            My journey has gone through the creation of
                             high-performance applications utilizing C++ and .NET
                             Core, as well as the development of games and applications using
-                            Unity and Godot. This has also lead me to explore web development,
+                            Unity and Godot; Lead me to explore web development,
                             machine learning frameworks, rendering pipelines,
                             statitics, and so.. so much more.
 
                             <br />
                             <br />
                             I look forward to connecting with you!
-                        </div>
-                        <div style={{ padding: "1em", paddingTop: "3em" }}>
                         </div>
                     </Row>
                 </Part>
@@ -132,11 +147,6 @@ export default function Index() {
                         <img src="https://camo.githubusercontent.com/31c41a7e1d08f46fb7e204ee09c48c8697b69616c44d87e9fd51c3108679b6eb/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7079746f7263682f7079746f7263682d69636f6e2e737667" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://camo.githubusercontent.com/48d901d5fed509b5f2dd13ecb8246653f66e655d5e7838450460b04360942a43/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61726475696e6f2d312e737667" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yaml/yaml-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/yarn/yarn-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/linuxmint/linuxmint-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/windows11/windows11-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/wolfram/wolfram-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vulkan/vulkan-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualbasic/visualbasic-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/typescript/typescript-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/twilio/twilio-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
@@ -146,14 +156,7 @@ export default function Index() {
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/visualstudio/visualstudio-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vite/vite-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/vitejs/vitejs-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                    </HorizontalScroll>
-
-                    <HorizontalScroll style={{ height: "3em", width: "120%", transform: "translate(-10%,0)" }}>
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/sqlite/sqlite-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/spyder/spyder-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/rust/rust-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/ruby/ruby-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/renpy/renpy-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/react/react-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pyscript/pyscript-plain-wordmark.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/pypi/pypi-plain.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
@@ -170,7 +173,7 @@ export default function Index() {
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/markdown/markdown-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                     </HorizontalScroll>
 
-                    <h3 style={{ textAlign: "center" }}>144+ Projects deployed across so <i>so</i> many environments<br /><small>(help)</small></h3>
+                    <h3 style={{ textAlign: "center" }}>144+ Projects deployed across so <i>so</i> many environments<br /><small>(ask me about them!)</small></h3>
                 </Part>
 
                 <Part
@@ -272,7 +275,7 @@ export default function Index() {
                                     <img src="art and design/Minecraft Skins/Render5.png" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                 </div>
                             </a>
-                            Minecraft Skins
+                            Game Assets
                         </div>
 
                         <div style={{ width: "32%", textAlign: "center" }}>
@@ -325,7 +328,7 @@ export default function Index() {
 
                         <div style={{ width: "32%", textAlign: "center" }}>
                             <img src="models/2022 Minecraft/Grayscaped.png" style={{ maxWidth: "100%" }} />
-                            Minecraft Renders
+                            3D Renders
                         </div>
 
                     </Row>

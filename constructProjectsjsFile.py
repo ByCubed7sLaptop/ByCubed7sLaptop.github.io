@@ -10,7 +10,8 @@ projectString = "DISPLAY,\n"
 
 fileDisplayNames = []
 
-contents = "import {Project} from \"./data\";\n\n"
+contents = "# Generated with contructProjectsjsFile.py!\n"
+contents += "import {Project} from \"./data\";\n\n"
 for e in os.scandir(directory):
     if e.is_file():
         with open(e.path, "r") as f:

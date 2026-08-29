@@ -28,7 +28,8 @@ export const Experiences = [
         title: "Java Plugin Developer",
         at: "Freelance",
         from: new Date(2020, 2, 1),
-        to: new Date(2024, 2, 1),
+        //to: new Date(2024, 2, 1),
+        to: new Date(),
         description:
             "Experienced Java developer with a track record in creating and launching innovative modding applications. Adept at balancing technical complexity with user experience, negotiating client requirements, and iterating designs to achieve optimal results; committed to pushing the boundaries of technology to deliver high-quality solutions."
     },

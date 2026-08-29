@@ -28,19 +28,19 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
         <>
             <BrowserRouter>
-                <Banner
-                    style={{backgroundColor: "var(--accent)"}}
-                    name=""
-                >
-                    <a href={HomePath + "fanart"}>Fanart</a>
+                <Banner style={{backgroundColor: "var(--accent)"}} name="" >
                     <a href={HomePath}>Home</a>
+                    <a href={HomePath + "it"}>CV</a>
+                    <a href={HomePath + "projects"}>Projects</a>
+                    <a href={HomePath + "fanart"}>Fanart</a>
                 </Banner>
-                <ShowOnScrollDown
-                    style={{backgroundColor: "var(--accent)"}}
-                    name={Me.name}
-                >
-                    <a href={HomePath + "fanart"}>Fanart</a>
-                    <a href={HomePath}>Home</a>
+                <ShowOnScrollDown>
+                    <Banner style={{backgroundColor: "var(--accent)"}} name={Me.name}>
+                        <a href={HomePath}>Home</a>
+                        <a href={HomePath + "it"}>CV</a>
+                        <a href={HomePath + "Projects"}>Projects</a>
+                        <a href={HomePath + "fanart"}>Fanart</a>
+                    </Banner>
                 </ShowOnScrollDown>
 
                 <Routes>
