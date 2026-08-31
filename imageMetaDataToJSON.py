@@ -73,5 +73,5 @@ def generate_metadata_json(directory, output_file="images_metadata.json"):
 
 
 if __name__ == "__main__":
-    generate_metadata_json("/media/bycubed7/New Volume/Projects/websiteV2/thatoneprogrammer/public/fanart",
-                           "/media/bycubed7/New Volume/Projects/websiteV2/thatoneprogrammer/src/data/fanart.json")
+    generate_metadata_json("./public/fanart",
+                           "./src/data/fanart.json")
