@@ -55,7 +55,7 @@ export default function Index() {
                     {head.map((src, index) => (
                             <a href={imagesToSocials(src)} style={{textDecoration: "none"}}>
                                 <div style={{breakInside: "avoid", marginBottom: "15px", background: "rgba(255, 255, 255, 0.1)", borderRadius: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.1)"}}>
-                                        <img style={{imageRendering: "pixelated", width:"100%", maxWidth:"50vh", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
+                                        <img style={{imageRendering: "pixelated", width:"100%", minWidth:"20vh", display: "block"}} key={index} src={imagesToSrc(src)} alt={`${src}`} />
                                         <div style={{textAlign:"center", width:"100%"}}>"{src.title}" - {src.author}</div>
                                 </div>
                             </a>

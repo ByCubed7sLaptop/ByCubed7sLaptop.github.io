@@ -173,7 +173,7 @@ export default function Index() {
                         <img src="https://raw.githubusercontent.com/devicons/devicon/7330accdbc47e2dc0c19789a48533c4a3c50fe58/icons/markdown/markdown-original.svg" style={{ height: "100%", filter: "brightness(0) invert()" }} loading="lazy" />
                     </HorizontalScroll>
 
-                    <h3 style={{ textAlign: "center" }}>144+ Projects deployed across so <i>so</i> many environments<br /><small>(ask me about them!)</small></h3>
+                    <h3 style={{ textAlign: "center" }}>100+ Projects deployed across so <i>so</i> many environments<br /><small>(ask me about them!)</small></h3>
                 </Part>
 
                 <Part

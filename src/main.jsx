@@ -10,6 +10,7 @@ import Cards from "./pages/cards";
 import Rimworld from "./pages/rimworld";
 import Posters from "./pages/posters";
 import Fanart from "./pages/fanart";
+import Art from "./pages/art";
 import NotFound from "./pages/404";
 
 import Banner from "./components/banner";
@@ -32,6 +33,7 @@ createRoot(document.getElementById("root")).render(
                     <a href={HomePath}>Home</a>
                     <a href={HomePath + "it"}>CV</a>
                     <a href={HomePath + "projects"}>Projects</a>
+                    <a href={HomePath + "art"}>Art</a>
                     <a href={HomePath + "fanart"}>Fanart</a>
                 </Banner>
                 <ShowOnScrollDown>
@@ -39,6 +41,7 @@ createRoot(document.getElementById("root")).render(
                         <a href={HomePath}>Home</a>
                         <a href={HomePath + "it"}>CV</a>
                         <a href={HomePath + "Projects"}>Projects</a>
+                        <a href={HomePath + "art"}>Art</a>
                         <a href={HomePath + "fanart"}>Fanart</a>
                     </Banner>
                 </ShowOnScrollDown>
@@ -51,6 +54,7 @@ createRoot(document.getElementById("root")).render(
                     <Route exact path="/rimworld" element={<Rimworld />} />
                     <Route exact path="/posters" element={<Posters />} />
                     <Route exact path="/fanart" element={<Fanart />} />
+                    <Route exact path="/art" element={<Art />} />
 
                     {projects.map(project => (
                         <Route
